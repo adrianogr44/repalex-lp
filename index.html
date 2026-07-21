@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palete PBR e Descartável em Belo Horizonte | REPALEX</title>
+<meta name="description" content="Palete PBR e descartável em Belo Horizonte e região. Cotação no WhatsApp para frigoríficos, distribuidoras, CDs e transportadoras. Peça seu orçamento.">
+<!-- canonical entra quando a pagina subir no dominio proprio -->
+<meta name="robots" content="noindex,nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="REPALEX">
+<meta property="og:title" content="Palete PBR e descartável em Belo Horizonte, REPALEX">
+<meta property="og:description" content="Cotação de paletes pelo WhatsApp com resposta no mesmo dia. Vendemos PBR, descartável e usado, e compramos seus paletes parados.">
+<meta property="og:url" content="https://repalex.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Marca que o JS esta ativo. Fica no head, antes do CSS, para que o estado
+     inicial do reveal nunca seja aplicado em navegador sem JS. -->
+<script>document.documentElement.className += " js";</script>
+
+<!-- Google Tag Manager (aguardando o ID real do container, nao inventar) -->
+<script>window.dataLayer = window.dataLayer || [];</script>
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+-->
+<!-- Fim Google Tag Manager -->
+
+<style>
+/* ==========================================================================
+   REPALEX, LP v3
+   Arquitetura de secoes informada pela inteligencia competitiva de 20/07.
+   Padrao estrutural replicado, zero codigo, texto ou imagem de terceiro.
+   Sem personagem ilustrado e sem fotografia: a identidade visual e
+   construida com tipografia e um grafismo proprio de ripa de palete.
+
+   REGRA DE ESTILO (Adriano, 16/07): a pagina NAO usa travessao.
+   Nem em conteudo, nem em comentario. Virgula, dois-pontos ou frase separada.
+   ========================================================================== */
+
+@font-face{font-family:'Archivo';src:url('assets/fonts/archivo-v-latin-700-800.woff2') format('woff2-variations');font-weight:700 800;font-display:swap}
+@font-face{font-family:'IBM Plex Sans';src:url('assets/fonts/plex-sans-v-latin-400-600.woff2') format('woff2-variations');font-weight:400 600;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url('assets/fonts/plex-mono-latin-400.woff2') format('woff2');font-weight:400;font-display:swap}
+
+:root{
+  --branco:#FFFFFF; --off-white:#F2F6F9; --ink:#16222E;
+  --cinza-500:#5B6B79; --cinza-200:#D7DEE4; --muted:var(--cinza-500);
+  --azul-900:#0C2D4A; --azul-800:#123B5E; --azul-700:#175A8C; --azul-100:#C9DCEA;
+  --verde-700:#0F7A3A; --verde-800:#0B6B33; --verde-300:#4FCB79;
+  --erro:#B23B2E;
+  --f-display:'Archivo','Trebuchet MS',Arial,sans-serif;
+  --f-body:'IBM Plex Sans','Segoe UI',Arial,sans-serif;
+  --f-mono:'IBM Plex Mono',Consolas,monospace;
+  --sh-sm:0 4px 14px rgba(12,45,74,.10);
+  --sh-md:0 14px 34px rgba(12,45,74,.14);
+  --sh-lg:0 24px 60px rgba(12,45,74,.20);
+  --radius:14px; --radius-sm:8px;
+  --band-y:56px; --maxw:1180px;
+}
+@media (min-width:900px){:root{--band-y:88px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--f-body);color:var(--ink);background:var(--branco);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1.12;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(30px,7vw,54px)}
+h2{font-size:clamp(25px,4.6vw,40px)}
+h3{font-size:clamp(18px,2.4vw,21px);font-weight:700}
+p{margin:0}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.band{padding:var(--band-y) 0}
+/* O navegador pula layout e paint das secoes fora da tela. contain-intrinsic-size
+   reserva a altura estimada para a barra de rolagem nao pular. O hero e o rodape
+   ficam de fora: o hero e a primeira pintura e o rodape e curto. */
+.band:not(.final){content-visibility:auto;contain-intrinsic-size:auto 900px}
+.band-alt{background:var(--off-white)}
+.band-dark{background:var(--azul-900);color:var(--branco)}
+.band-dark .lede,.band-dark .muted{color:var(--azul-100)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--verde-700);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--verde-700);flex:none}
+.band-dark .eyebrow{color:var(--verde-300)}
+.band-dark .eyebrow::before{background:var(--verde-300)}
+.head{max-width:720px;margin-bottom:36px}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.head.center .eyebrow{justify-content:center}
+.lede{margin-top:14px;font-size:clamp(15px,1.7vw,18px);color:var(--muted)}
+.muted{color:var(--muted)}
+
+/* Grafismo proprio: ripas de palete em gradiente, sem nenhuma imagem */
+.ripas{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 46px,transparent 46px 92px),
+                   repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 5px,transparent 5px 62px)}
+
+/* Botoes */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--f-body);font-weight:600;font-size:15px;line-height:1;
+  padding:15px 24px;border-radius:var(--radius-sm);border:2px solid transparent;
+  text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--verde-300);outline-offset:3px}
+.btn-wa{background:var(--verde-700);color:#fff;box-shadow:var(--sh-sm)}
+.btn-wa:hover{background:var(--verde-800);box-shadow:var(--sh-md)}
+.btn-ghost{background:transparent;color:var(--branco);border-color:rgba(255,255,255,.45)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-line{background:var(--branco);color:var(--azul-900);border-color:var(--cinza-200)}
+.btn-line:hover{border-color:var(--azul-700)}
+.btn-block{width:100%}
+.ico{width:18px;height:18px;flex:none;fill:currentColor}
+
+/* Header */
+/* Sem backdrop-filter: o fundo ja estava em 97% de opacidade, o desfoque era
+   imperceptivel e custava um recalculo por quadro no header fixo. */
+.topo{position:sticky;top:0;z-index:60;background:#0C2D4A;color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12)}
+.topo .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.marca{font-family:var(--f-display);font-weight:800;font-size:21px;letter-spacing:.02em;
+  text-decoration:none;color:#fff;flex:none}
+.marca span{color:var(--verde-300)}
+.nav{display:none;gap:22px;margin-left:auto;font-size:14px}
+.nav a{text-decoration:none;color:rgba(255,255,255,.82);padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:#fff;border-bottom-color:var(--verde-300)}
+.topo .btn{padding:11px 17px;font-size:14px;margin-left:auto}
+@media (min-width:960px){.nav{display:flex}.topo .btn{margin-left:0}}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(160deg,var(--azul-900) 0%,var(--azul-800) 58%,#0a2740 100%);
+  color:#fff;overflow:hidden;padding:clamp(48px,8vw,96px) 0 clamp(40px,6vw,72px)}
+.hero .wrap{position:relative;z-index:2;max-width:900px}
+.hero h1{margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--verde-300);display:block}
+.hero .lede{color:var(--azul-100);max-width:640px;font-size:clamp(15px,1.9vw,19px)}
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.sob-botao{margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.7);max-width:520px}
+.sob-botao a{color:var(--verde-300)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:34px;padding-top:26px;
+  border-top:1px solid rgba(255,255,255,.16)}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;
+  padding:8px 14px;border-radius:100px;background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.16);color:#fff}
+.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--verde-300);flex:none}
+
+/* Grades */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr}
+.g3{grid-template-columns:1fr}
+@media (min-width:700px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.g3{grid-template-columns:repeat(3,1fr)}}
+
+/* Cards de produto */
+.card{background:var(--branco);border:1px solid var(--cinza-200);border-radius:var(--radius);
+  padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--sh-sm)}
+.card[hidden]{display:none}
+/* Foto do produto: proporcao fixa via aspect-ratio para nao gerar CLS
+   enquanto a imagem carrega. O fundo casa com o da propria imagem. */
+.card figure{margin:-26px -24px 20px;background:var(--off-white);
+  border-bottom:1px solid var(--cinza-200);border-radius:var(--radius) var(--radius) 0 0;
+  overflow:hidden}
+.card figure img{width:100%;height:auto;aspect-ratio:640/460;object-fit:cover;display:block}
+.tag{align-self:flex-start;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;padding:5px 11px;border-radius:100px;
+  background:#E7F3EC;color:var(--verde-800);margin-bottom:16px}
+.card h3{margin-bottom:10px}
+.card>p{font-size:14.5px;color:var(--muted)}
+.specs{list-style:none;margin:18px 0 24px;padding:0;display:grid;gap:11px}
+.specs li{position:relative;padding-left:26px;font-size:14.5px}
+.specs li::before{content:"";position:absolute;left:0;top:7px;width:13px;height:7px;
+  border-left:2.5px solid var(--verde-700);border-bottom:2.5px solid var(--verde-700);
+  transform:rotate(-45deg)}
+.card .btn{margin-top:auto}
+.pos-cards{margin-top:26px;text-align:center;font-size:15px}
+.pos-cards a{color:var(--verde-800);font-weight:600}
+
+/* Tabela */
+.tab-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--sh-sm);
+  border:1px solid var(--cinza-200);background:var(--branco)}
+table{width:100%;border-collapse:collapse;min-width:560px;font-size:14.5px}
+thead th{background:var(--azul-900);color:#fff;text-align:left;padding:15px 18px;
+  font-family:var(--f-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+tbody td{padding:15px 18px;border-top:1px solid var(--cinza-200)}
+tbody th{padding:15px 18px;border-top:1px solid var(--cinza-200);text-align:left;font-weight:700}
+.fonte{margin-top:14px;font-size:13px;color:var(--muted)}
+.fonte a{color:var(--azul-700)}
+
+/* Setores */
+.setor{background:var(--branco);border:1px solid var(--cinza-200);border-left:4px solid var(--verde-700);
+  border-radius:var(--radius-sm);padding:22px 22px}
+.setor h3{font-size:17px;margin-bottom:9px}
+.setor p{font-size:14.5px;color:var(--muted)}
+
+/* Mao dupla */
+.duas-colunas{display:grid;gap:34px;align-items:start}
+@media (min-width:900px){.duas-colunas{grid-template-columns:1.05fr .95fr;gap:56px}}
+.painel{background:linear-gradient(155deg,var(--verde-800),var(--verde-700));color:#fff;
+  border-radius:var(--radius);padding:32px 28px;position:relative;overflow:hidden}
+.painel>*{position:relative;z-index:2}
+.painel h3{margin-bottom:14px;font-size:clamp(20px,2.6vw,26px)}
+.painel .specs li::before{border-color:#fff}
+.painel .specs li{color:rgba(255,255,255,.94)}
+
+/* Diferenciais */
+.dif{background:var(--branco);border:1px solid var(--cinza-200);border-radius:var(--radius);padding:26px 24px}
+.dif .num{font-family:var(--f-mono);font-size:12px;color:var(--verde-700);margin-bottom:12px;display:block}
+.dif h3{margin-bottom:10px}
+.dif p{font-size:14.5px;color:var(--muted)}
+
+
+/* FAQ */
+.faq-lista{display:grid;gap:12px;max-width:840px;margin:0 auto}
+details{background:var(--branco);border:1px solid var(--cinza-200);border-radius:var(--radius-sm);
+  padding:0;overflow:hidden}
+details[open]{border-color:var(--verde-700);box-shadow:var(--sh-sm)}
+summary{list-style:none;cursor:pointer;padding:19px 54px 19px 22px;font-weight:600;
+  font-size:15.5px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:3px solid var(--verde-300);outline-offset:-3px}
+summary::after{content:"";position:absolute;right:22px;top:50%;width:11px;height:11px;
+  border-right:2.5px solid var(--verde-700);border-bottom:2.5px solid var(--verde-700);
+  transform:translateY(-70%) rotate(45deg)}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details .corpo{padding:0 22px 22px;font-size:14.5px;color:var(--muted)}
+details .corpo strong{color:var(--ink)}
+
+/* Formulario */
+.form-card{background:var(--branco);border:1px solid var(--cinza-200);border-radius:var(--radius);
+  padding:28px 24px;box-shadow:var(--sh-sm);max-width:640px;margin:0 auto}
+.campo{margin-bottom:18px}
+.campo label{display:block;font-size:14px;font-weight:600;margin-bottom:7px}
+.campo input,.campo select,.campo textarea{width:100%;font-family:var(--f-body);font-size:15.5px;
+  padding:13px 14px;border:1px solid var(--cinza-200);border-radius:var(--radius-sm);
+  background:var(--branco);color:var(--ink)}
+.campo textarea{min-height:96px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--verde-700);
+  box-shadow:0 0 0 3px rgba(15,122,58,.16)}
+.campo .erro{display:none;color:var(--erro);font-size:13px;margin-top:6px}
+.campo.invalido input,.campo.invalido select,.campo.invalido textarea{border-color:var(--erro)}
+.campo.invalido .erro{display:block}
+.form-nota{margin-top:14px;font-size:13px;color:var(--muted);text-align:center}
+
+/* CTA final */
+.final{background:linear-gradient(150deg,var(--azul-900),var(--azul-800));color:#fff;
+  position:relative;overflow:hidden;text-align:center}
+.final .wrap{position:relative;z-index:2;max-width:760px}
+.final h2{margin-bottom:16px}
+.final .lede{color:var(--azul-100)}
+.final .acoes{justify-content:center}
+
+/* Rodape */
+.rodape{background:#08202F;color:rgba(255,255,255,.72);padding:52px 0 30px;font-size:14.5px}
+.rodape a{color:rgba(255,255,255,.86)}
+.rod-grid{display:grid;gap:30px}
+@media (min-width:780px){.rod-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.rodape h3{color:#fff;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:400;margin-bottom:15px}
+.rod-links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rod-links a{text-decoration:none}
+.rod-links a:hover{color:var(--verde-300)}
+.rod-fim{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.13);
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13px}
+
+/* Botao flutuante */
+.fab{position:fixed;right:16px;bottom:16px;z-index:70;box-shadow:var(--sh-lg)}
+.fab.fab-hide{display:none}
+@media (min-width:960px){.fab{right:24px;bottom:24px}}
+
+.pula{position:absolute;left:-9999px;top:0;background:#fff;color:var(--azul-900);padding:12px 18px;z-index:100}
+.pula:focus{left:12px;top:12px}
+
+/* ==========================================================================
+   Revelar ao rolar
+
+   Tres travas de seguranca, cada uma por um motivo concreto:
+
+   1. O estado inicial so existe sob "html.js". Sem JS a pagina fica visivel,
+      nunca em branco. O marcador entra no head, antes deste CSS.
+   2. O hero fica de fora. Ele e o LCP e esta na dobra: animar atrasaria a
+      primeira pintura e o CTA principal.
+   3. prefers-reduced-motion revela tudo na hora, sem deslocamento.
+
+   A classe .revelado e definitiva: o observador para de olhar o elemento
+   depois de revelar. Nada volta a sumir ao rolar de novo, o que quebraria
+   captura de tela e leitura por quem rola pra cima.
+   ========================================================================== */
+
+/* Sem will-change aqui de proposito. A primeira versao declarava
+   will-change:opacity,transform no estado base e promovia 38 elementos a
+   camada de composicao ao mesmo tempo, o tempo todo, mesmo os que ja tinham
+   sido revelados. opacity e transform ja sao compostas na GPU sem esse aviso,
+   entao o custo vinha sem contrapartida. */
+html.js .rv{
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .48s cubic-bezier(.22,.61,.36,1),
+             transform .48s cubic-bezier(.22,.61,.36,1);
+}
+html.js .rv.revelado{opacity:1;transform:none}
+
+/* Colunas de texto sobem menos, para o olho nao perder a linha de leitura */
+html.js .head.rv,html.js .duas-colunas>div.rv{transform:translateY(12px)}
+
+@media (prefers-reduced-motion:reduce){
+  html.js .rv{opacity:1!important;transform:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Google Tag Manager noscript, comentado ate o ID real existir
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+
+<a class="pula" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#topo">REPA<span>LEX</span></a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#specs">Especificações</a>
+      <a href="#setores">Setores</a>
+      <a href="#compra-usados">Vender paletes</a>
+      <a href="#diferenciais">Por que a REPALEX</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn btn-wa" href="#" data-wa data-cta-position="topo" data-produto="indefinido"
+       data-msg="Olá! Vim pela página da REPALEX e quero um orçamento de paletes para minha empresa. Produto: ___ | Quantidade aproximada: ___">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- 1. Hero -->
+<section class="hero" id="topo">
+  <div class="ripas" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Palete PBR e descartável em Belo Horizonte<em>Cotação pelo WhatsApp, resposta no mesmo dia</em></h1>
+    <p class="lede">PBR, descartável e usado para quem não pode ter doca parada: frigorífico, distribuidora, CD e transportadora. Manda o produto e a quantidade no WhatsApp. O orçamento sai no mesmo dia e ninguém vai te pedir cadastro.</p>
+    <div class="acoes">
+      <a class="btn btn-wa" href="#" data-wa data-cta-position="hero-primario" data-produto="indefinido"
+         data-msg="Olá! Vim pela página da REPALEX e quero um orçamento de paletes para minha empresa. Produto: ___ | Quantidade aproximada: ___">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg>
+        Pedir orçamento no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#formulario">Prefiro pedir pelo formulário</a>
+    </div>
+    <p class="sob-botao">Também por e-mail:
+      <a href="mailto:Repalexltda@gmail.com" data-contact data-contact-position="hero">Repalexltda@gmail.com</a>
+    </p>
+    <div class="chips">
+      <span class="chip">Palete PBR e descartável</span>
+      <span class="chip">Vendemos e compramos paletes usados</span>
+      <span class="chip">Atendimento por WhatsApp e e-mail</span>
+      <span class="chip">Loja física</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Catalogo de produtos -->
+<section class="band" id="produtos">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Catálogo</p>
+      <h2>Os paletes que sua operação pede</h2>
+      <p class="lede">Cada operação pede um palete diferente. Escolha o seu e peça a cotação direto no card.</p>
+    </div>
+
+    <div class="grid g3" id="lista-produtos">
+
+      <article class="card" data-cat="pbr">
+        <figure>
+          <picture>
+            <source srcset="assets/img/v3-produto-pbr.webp" type="image/webp">
+            <img src="assets/img/v3-produto-pbr.jpg" width="640" height="460" loading="lazy" decoding="async"
+                 alt="Paletes de madeira empilhados em estoque">
+          </picture>
+        </figure>
+        <span class="tag">1,00 x 1,20 m</span>
+        <h3>Palete PBR, o padrão que sua cadeia exige</h3>
+        <p>O Palete Padrão Brasileiro é o único aceito de ponta a ponta na cadeia de supermercados, CDs e indústria alimentícia. Se o seu cliente exige PBR, não tem substituto, e faltar palete padronizado é doca parada.</p>
+        <ul class="specs">
+          <li>Medida padrão 1,00 x 1,20 m, intercambiável em toda a cadeia logística</li>
+          <li>Carga estática 2.500 a 3.000 kg, dinâmica 1.500 a 2.000 kg</li>
+          <li>Compatível com empilhadeiras, paleteiras e porta-paletes</li>
+          <li>Indicado para frigoríficos, distribuidoras de alimentos, CDs e supermercados</li>
+        </ul>
+        <a class="btn btn-wa btn-block" href="#" data-wa data-cta-position="card-pbr" data-produto="pbr"
+           data-msg="Quero cotar palete PBR pra minha empresa. Quantidade aproximada: ___">Cotar palete PBR</a>
+      </article>
+
+      <article class="card" data-cat="descartavel">
+        <figure>
+          <picture>
+            <source srcset="assets/img/v3-produto-descartavel.webp" type="image/webp">
+            <img src="assets/img/v3-produto-descartavel.jpg" width="640" height="460" loading="lazy" decoding="async"
+                 alt="Paletes de madeira leves empilhados, prontos para expedição">
+          </picture>
+        </figure>
+        <span class="tag">Sem retorno</span>
+        <h3>Palete descartável, enviou e esqueceu</h3>
+        <p>Para carga que sai e não volta: expedição, e-commerce e picos de fim de ano. Você paga menos por unidade e elimina a logística reversa, sem controle de retorno e sem palete sumindo na ponta.</p>
+        <ul class="specs">
+          <li>Custo menor por viagem, ideal para envio sem retorno</li>
+          <li>Zero logística reversa: não precisa rastrear nem recolher</li>
+          <li>Fim de ano é quando falta. Dá para formar estoque antes do pico</li>
+        </ul>
+        <a class="btn btn-wa btn-block" href="#" data-wa data-cta-position="card-descartavel" data-produto="descartavel"
+           data-msg="Quero cotar palete descartável (one way) pra minha empresa. Quantidade aproximada: ___">Cotar palete descartável</a>
+      </article>
+
+      <article class="card" data-cat="usado">
+        <figure>
+          <picture>
+            <source srcset="assets/img/v3-produto-usado.webp" type="image/webp">
+            <img src="assets/img/v3-produto-usado.jpg" width="640" height="460" loading="lazy" decoding="async"
+                 alt="Paletes de madeira usados empilhados em pátio">
+          </picture>
+        </figure>
+        <span class="tag">Sob consulta</span>
+        <h3>Palete usado, economia para a sua operação</h3>
+        <p>Quando a operação é interna ou o cliente não exige palete novo, o usado resolve pelo menor custo. É também o palete que a gente compra de volta.</p>
+        <ul class="specs">
+          <li>Menor custo por unidade da linha</li>
+          <li>Indicado para movimentação interna, armazenagem e cargas leves ou médias</li>
+          <li>Disponibilidade sob consulta, o estoque gira rápido</li>
+        </ul>
+        <a class="btn btn-wa btn-block" href="#" data-wa data-cta-position="card-usado" data-produto="usado"
+           data-msg="Quero cotar palete usado pra minha empresa. Quantidade aproximada: ___">Cotar palete usado</a>
+      </article>
+
+    </div>
+
+    <p class="pos-cards">Não sabe qual serve pro seu caso?
+      <a href="#" data-wa data-cta-position="orientacao-produto" data-produto="indefinido"
+         data-msg="Não sei qual palete serve pra minha operação. Podem me orientar? Minha empresa é do setor: ___">Manda sua operação no WhatsApp</a>
+      que a gente recomenda o palete certo, sem empurrar o mais caro.
+    </p>
+  </div>
+</section>
+
+<!-- 3. Especificacoes tecnicas -->
+<section class="band band-alt" id="specs">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Especificações técnicas</p>
+      <h2>A medida que a sua cadeia cobra</h2>
+      <p class="lede">Antes de pedir preço você confere medida e carga. Segue a ficha do padrão PBR, o mais exigido pela cadeia de supermercados, CDs e indústria alimentícia.</p>
+    </div>
+    <div class="tab-wrap">
+      <table>
+        <caption class="sr-only" style="position:absolute;left:-9999px">Especificações do padrão PBR</caption>
+        <thead>
+          <tr><th scope="col">Item</th><th scope="col">Especificação</th><th scope="col">O que isso resolve</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Medida</th><td>1,00 x 1,20 m</td><td>Cubagem certa no caminhão padrão e intercâmbio em toda a cadeia</td></tr>
+          <tr><th scope="row">Carga estática</th><td>2.500 a 3.000 kg</td><td>Empilhamento em porta-paletes sem deformar</td></tr>
+          <tr><th scope="row">Carga dinâmica</th><td>1.500 a 2.000 kg</td><td>Movimentação com empilhadeira e paleteira em segurança</td></tr>
+          <tr><th scope="row">Peso aproximado</th><td>42 kg</td><td>Cálculo de tara e limite de eixo na expedição</td></tr>
+          <tr><th scope="row">Compatibilidade</th><td>Empilhadeira, paleteira e porta-paletes</td><td>Recebimento aceito sem devolução por padrão divergente</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fonte">Valores do padrão PBR conforme referências públicas do setor. As especificações do lote cotado para a sua empresa são confirmadas na própria cotação.</p>
+    <div class="acoes" style="justify-content:center;margin-top:28px">
+      <a class="btn btn-wa" href="#" data-wa data-cta-position="specs" data-produto="pbr"
+         data-msg="Quero conferir as especificações do palete PBR da REPALEX e receber uma cotação. Quantidade aproximada: ___">Cotar com essa especificação</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Setores atendidos -->
+<section class="band" id="setores">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Setores atendidos</p>
+      <h2>Palete certo para o seu setor</h2>
+      <p class="lede">Palete fora do padrão não é detalhe: trava porta-palete, atrasa conferência e volta na devolução. Cada setor cobra uma coisa diferente, e a cotação sai conforme a sua.</p>
+    </div>
+    <div class="grid g3">
+      <article class="setor">
+        <h3>Palete para frigoríficos</h3>
+        <p>Câmara fria não espera. Frigorífico precisa de PBR padronizado que gire na cadeia de distribuição sem devolução recusada e sem carga retida na doca. Cotamos o PBR pela sua rotina de expedição e deixamos a reposição combinada.</p>
+      </article>
+      <article class="setor">
+        <h3>Palete para distribuidoras e CDs</h3>
+        <p>Distribuidora e CD vivem de giro. Palete fora do padrão trava porta-palete, empilhadeira e conferência, e aqui o PBR 1,00 x 1,20 m é regra. Você cota sem abrir chamado com fornecedor.</p>
+      </article>
+      <article class="setor">
+        <h3>Palete para supermercados</h3>
+        <p>Chegou fora do padrão? O recebimento devolve. Com PBR você padroniza a entrada e evita retrabalho na loja e no depósito. O descartável resolve ação sazonal e ponta de estoque.</p>
+      </article>
+      <article class="setor">
+        <h3>Palete para mineração e cargas pesadas</h3>
+        <p>Peça de mineração raramente cabe no 1,00 x 1,20 m: o problema é peso concentrado e medida fora do padrão. Manda o peso da peça, a medida e como ela é movimentada. A gente diz o que dá para atender antes de você comprar palete errado.</p>
+      </article>
+      <article class="setor">
+        <h3>Palete para fábricas e indústrias</h3>
+        <p>Linha parada por falta de palete é prejuízo por hora. Fábricas compram da gente para manter estoque de PBR e descartável com reposição simples: chamou, cotou, programou a entrega.</p>
+      </article>
+      <article class="setor">
+        <h3>Palete para transportadoras</h3>
+        <p>Todo mês some palete na ponta da entrega, e a transportadora paga a conta. O descartável one way elimina o retorno, o usado reduz o custo do giro. Cotamos os dois. E ainda compramos o que está parado no seu pátio.</p>
+      </article>
+    </div>
+    <div class="acoes" style="justify-content:center;margin-top:32px">
+      <a class="btn btn-line" href="#" data-wa data-cta-position="setores" data-produto="indefinido"
+         data-msg="Minha empresa é do setor ___ e preciso de uma recomendação de palete com cotação. Quantidade aproximada: ___">Cotar para o meu setor</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Mao dupla, compramos usados -->
+<section class="band band-alt" id="compra-usados">
+  <div class="wrap">
+    <div class="duas-colunas">
+      <div>
+        <p class="eyebrow">Mão dupla</p>
+        <h2>Compramos seus paletes usados</h2>
+        <p class="lede">Trabalhamos nas duas pontas. Vendemos o palete que a sua operação precisa e compramos o que está sobrando no seu pátio.</p>
+        <p class="lede">Palete parado é dinheiro imobilizado ocupando espaço de armazenagem. Em vez de descartar ou deixar empilhado tomando chuva, transforme em caixa: mande fotos e a quantidade pelo WhatsApp e receba uma proposta de compra.</p>
+      </div>
+      <div class="painel">
+        <div class="ripas" aria-hidden="true"></div>
+        <h3>Como funciona a compra</h3>
+        <ul class="specs">
+          <li>Avaliação pela foto e quantidade, direto no WhatsApp</li>
+          <li>Libera espaço de pátio e recupera parte do custo logístico</li>
+          <li>Um contato só resolve o ciclo inteiro do palete na sua logística</li>
+        </ul>
+        <a class="btn btn-line btn-block" href="#" data-wa data-cta-position="mao-dupla" data-produto="compra-usados"
+           data-msg="Tenho paletes usados no pátio e quero uma proposta de compra da REPALEX. Quantidade aproximada: ___">Vender meus paletes usados</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Diferenciais -->
+<section class="band" id="diferenciais">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Por que cotar com a REPALEX</h2>
+    </div>
+    <div class="grid g3">
+      <article class="dif">
+        <span class="num">01</span>
+        <h3>Qualidade com preço de quem vive de palete</h3>
+        <p>Palete ruim quebra, derruba carga e vira prejuízo maior que a economia. Por isso a gente cota pelo que você movimenta, e fala quando o mais barato já resolve o seu caso. Os dois, não um ou outro.</p>
+      </article>
+      <article class="dif">
+        <span class="num">02</span>
+        <h3>Cotação sem burocracia, resposta no mesmo dia</h3>
+        <p>Nada de formulário longo nem de retornaremos em até 5 dias úteis. Você chama no WhatsApp, informa produto e quantidade, recebe a cotação no mesmo dia.</p>
+      </article>
+      <article class="dif">
+        <span class="num">03</span>
+        <h3>Loja física e atendimento direto</h3>
+        <p>Você fala com quem decide, não com robô de triagem. O mesmo WhatsApp vale do primeiro contato até a entrega.</p>
+      </article>
+    </div>
+
+    <div class="duas-colunas" style="margin-top:48px">
+      <div>
+        <p class="eyebrow">Contra a locação</p>
+        <h3 style="font-size:clamp(22px,3.2vw,30px);font-family:var(--f-display);font-weight:800">Seu palete, seu patrimônio</h3>
+        <p class="lede">Locação de palete parece prática até a fatura chegar todo mês. Com a REPALEX, o palete é seu: sem mensalidade, sem contrato de fidelidade, sem multa de perda e sem logística de devolução pra administrar. Comprou, usou, e o ativo é da sua empresa, inclusive na hora de revender os usados, pra gente mesmo se quiser.</p>
+      </div>
+      <div class="tab-wrap">
+        <table style="min-width:0">
+          <thead><tr><th scope="col">Locação (pooling)</th><th scope="col">Comprar da REPALEX</th></tr></thead>
+          <tbody>
+            <tr><td>Mensalidade eterna</td><td>Pagamento único, o palete é seu</td></tr>
+            <tr><td>Contrato e fidelidade</td><td>Sem contrato: comprou, acabou</td></tr>
+            <tr><td>Devolução obrigatória e taxa por perda</td><td>Sem devolução, usado vira dinheiro de volta</td></tr>
+            <tr><td>Padronização rígida do pool</td><td>Você escolhe PBR, descartável ou usado</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FAQ -->
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Perguntas de quem compra palete para empresa</h2>
+    </div>
+    <div class="faq-lista">
+      <details>
+        <summary>Qual a quantidade mínima por pedido?</summary>
+        <div class="corpo">Mande no WhatsApp a quantidade que você precisa. Volumes menores também são cotados. A resposta sai no mesmo dia.</div>
+      </details>
+      <details>
+        <summary>Qual o prazo de entrega?</summary>
+        <div class="corpo">O prazo depende do produto, do volume e da sua região. Ao pedir a cotação você já recebe o prazo real para o seu pedido, sem promessa genérica.</div>
+      </details>
+      <details>
+        <summary>Qual a diferença entre PBR, descartável e usado? Qual serve pra minha operação?</summary>
+        <div class="corpo">
+          <strong>PBR</strong> é o Palete Padrão Brasileiro (1,00 x 1,20 m): obrigatório quando sua carga entra em CD de rede grande ou em recebimento de supermercado. É o que aguenta mais peso e o que passa em qualquer conferência.<br><br>
+          <strong>Descartável (one way)</strong> é para carga que sai e não volta: menor custo por viagem, zero logística reversa. É o que mais gira na expedição de fim de ano.<br><br>
+          <strong>Usado</strong> é a opção econômica para movimentação interna e armazenagem, quando o cliente final não exige palete novo.<br><br>
+          Na dúvida, descreva sua operação no WhatsApp. A gente indica o que resolve, mesmo quando é a opção mais barata.
+        </div>
+      </details>
+      <details>
+        <summary>Vocês compram paletes usados?</summary>
+        <div class="corpo">Sim, é uma das nossas frentes. Mande fotos e a quantidade no WhatsApp e receba uma proposta de compra. A avaliação sai pela foto, você não precisa levar o palete até a loja.</div>
+      </details>
+    </div>
+    <div class="acoes" style="justify-content:center;margin-top:32px">
+      <a class="btn btn-line" href="#" data-wa data-cta-position="faq" data-produto="indefinido"
+         data-msg="Tenho uma dúvida antes de pedir orçamento de paletes: ___">Tirar minha dúvida no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Formulario -->
+<section class="band band-alt" id="formulario">
+  <div class="wrap">
+    <div class="head center">
+      <h2>Prefere pedir a cotação pelo formulário?</h2>
+      <p class="lede">Preencha os campos abaixo. A gente retorna no telefone que você informar.</p>
+    </div>
+    <form class="form-card" id="form-cotacao" novalidate>
+      <div class="campo">
+        <label for="f-nome">Seu nome</label>
+        <input type="text" id="f-nome" name="nome" placeholder="Ex.: Ana Souza" autocomplete="name" required>
+        <span class="erro">Informe seu nome pra gente saber com quem falar.</span>
+      </div>
+      <div class="campo">
+        <label for="f-empresa">Empresa</label>
+        <input type="text" id="f-empresa" name="empresa" placeholder="Ex.: Distribuidora XYZ" autocomplete="organization">
+      </div>
+      <div class="campo">
+        <label for="f-fone">WhatsApp ou telefone com DDD</label>
+        <input type="tel" id="f-fone" name="telefone" placeholder="Ex.: (31) 99999-9999" autocomplete="tel" required>
+        <span class="erro">Informe um telefone válido com DDD, é por ele que a cotação chega.</span>
+      </div>
+      <div class="campo">
+        <label for="f-produto">Produto de interesse</label>
+        <select id="f-produto" name="produto">
+          <option value="">Selecione</option>
+          <option value="pbr">Palete PBR</option>
+          <option value="descartavel">Palete descartável</option>
+          <option value="usado">Palete usado</option>
+          <option value="compra-usados">Quero vender paletes usados</option>
+          <option value="indefinido">Outros ou não sei ainda</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-necessidade">Produto e quantidade aproximada</label>
+        <textarea id="f-necessidade" name="necessidade" placeholder="Ex.: 200 paletes PBR por mês" required></textarea>
+        <span class="erro">Conte o produto e a quantidade, é o que precisamos pra cotar.</span>
+      </div>
+      <button class="btn btn-wa btn-block" type="submit" data-cta-position="form-fallback">Enviar pedido de cotação</button>
+      <p class="form-nota">Seus dados são usados só para responder este pedido. Nada de spam.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 9. CTA final -->
+<section class="band final" id="orcamento">
+  <div class="ripas" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2>Sua operação não pode esperar palete</h2>
+    <p class="lede">Mande agora o produto e a quantidade. A cotação sai no mesmo dia, e sua doca não para por falta de palete.</p>
+    <div class="acoes">
+      <a class="btn btn-wa" href="#" data-wa data-cta-position="cta-final" data-produto="indefinido"
+         data-msg="Olá! Quero fechar um orçamento de paletes com a REPALEX. Produto: ___ | Quantidade aproximada: ___ | Empresa: ___">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg>
+        Pedir orçamento no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#formulario">Prefiro pedir pelo formulário</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rod-grid">
+      <div>
+        <a class="marca" href="#topo" style="font-size:24px">REPA<span>LEX</span></a>
+        <p style="margin-top:14px;max-width:340px">Compra e venda de paletes e embalagens de madeira. Palete PBR, descartável e usado para a operação da sua empresa.</p>
+      </div>
+      <div>
+        <h3>Produtos</h3>
+        <ul class="rod-links">
+          <li><a href="#produtos">Palete PBR</a></li>
+          <li><a href="#produtos">Palete descartável</a></li>
+          <li><a href="#produtos">Palete usado</a></li>
+          <li><a href="#compra-usados">Vender paletes usados</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul class="rod-links">
+          <li><a href="#" data-wa data-cta-position="rodape" data-produto="indefinido"
+                 data-msg="Olá! Vim pela página da REPALEX e quero um orçamento de paletes. Produto: ___ | Quantidade aproximada: ___">WhatsApp (31) 99566-1960</a></li>
+          <li><a href="mailto:Repalexltda@gmail.com" data-contact data-contact-position="rodape">Repalexltda@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rod-fim">
+      <span>REPALEX, paletes e embalagens de madeira</span>
+      <span>Belo Horizonte e região, MG</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-wa fab fab-hide" id="whats-fixo" href="#" data-wa data-cta-position="fab" data-produto="indefinido"
+   data-msg="Olá! Vim pela página da REPALEX e quero um orçamento de paletes para minha empresa. Produto: ___ | Quantidade aproximada: ___">
+  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg>
+  Pedir orçamento
+</a>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"LocalBusiness",
+      "@id":"https://repalex.com.br/#negocio",
+      "name":"REPALEX",
+      "description":"Compra e venda de paletes e embalagens de madeira em Belo Horizonte e região. Palete PBR, descartável e usado.",
+      "telephone":"+5531995661960",
+      "email":"Repalexltda@gmail.com",
+      "url":"https://repalex.com.br/",
+      "areaServed":[
+        {"@type":"City","name":"Belo Horizonte"},
+        {"@type":"AdministrativeArea","name":"Região Metropolitana de Belo Horizonte"}
+      ]
+    },
+    {
+      "@type":"Product",
+      "name":"Palete PBR",
+      "description":"Palete Padrão Brasileiro 1,00 x 1,20 m para cadeia de supermercados, CDs e indústria alimentícia.",
+      "brand":{"@id":"https://repalex.com.br/#negocio"}
+    },
+    {
+      "@type":"Product",
+      "name":"Palete descartável (one way)",
+      "description":"Palete para carga que sai e não volta, sem logística reversa.",
+      "brand":{"@id":"https://repalex.com.br/#negocio"}
+    },
+    {
+      "@type":"Product",
+      "name":"Palete usado",
+      "description":"Palete usado para movimentação interna, armazenagem e cargas leves ou médias.",
+      "brand":{"@id":"https://repalex.com.br/#negocio"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Qual a quantidade mínima por pedido?","acceptedAnswer":{"@type":"Answer","text":"Mande no WhatsApp a quantidade que você precisa. Volumes menores também são cotados. A resposta sai no mesmo dia."}},
+        {"@type":"Question","name":"Qual o prazo de entrega?","acceptedAnswer":{"@type":"Answer","text":"O prazo depende do produto, do volume e da sua região. Ao pedir a cotação você já recebe o prazo real para o seu pedido."}},
+        {"@type":"Question","name":"Qual a diferença entre PBR, descartável e usado?","acceptedAnswer":{"@type":"Answer","text":"PBR é o Palete Padrão Brasileiro de 1,00 x 1,20 m, exigido em CD de rede grande e em recebimento de supermercado. Descartável one way é para carga que sai e não volta, com menor custo por viagem. Usado é a opção econômica para movimentação interna e armazenagem."}},
+        {"@type":"Question","name":"Vocês compram paletes usados?","acceptedAnswer":{"@type":"Answer","text":"Sim. Mande fotos e a quantidade no WhatsApp e receba uma proposta de compra. A avaliação sai pela foto."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  var FONE = "5531995661960";
+  var CHAVES_UTM = ["utm_source","utm_medium","utm_campaign","utm_term","utm_content","gclid","gbraid","wbraid","fbclid"];
+
+  /* ---- 1. Persistencia de origem de campanha ---- */
+  function guardaOrigem(){
+    try{
+      var q = new URLSearchParams(location.search), achou = {};
+      CHAVES_UTM.forEach(function(k){ if(q.get(k)) achou[k] = q.get(k); });
+      if(Object.keys(achou).length){ sessionStorage.setItem("repalex_origem", JSON.stringify(achou)); }
+    }catch(e){}
+  }
+  function leOrigem(){
+    try{ return JSON.parse(sessionStorage.getItem("repalex_origem") || "{}"); }catch(e){ return {}; }
+  }
+  guardaOrigem();
+
+  /* ---- 2. Normalizacao do enum de produto ---- */
+  var PRODUTOS = ["pbr","descartavel","usado","compra-usados","indefinido"];
+  function normProduto(v){
+    v = (v || "").toLowerCase().trim();
+    return PRODUTOS.indexOf(v) > -1 ? v : "indefinido";
+  }
+
+  /* ---- 3. Push padronizado ---- */
+  function push(evento, extra){
+    var d = { event: evento, page_location: location.href };
+    var o = leOrigem();
+    Object.keys(o).forEach(function(k){ d[k] = o[k]; });
+    Object.keys(extra || {}).forEach(function(k){ d[k] = extra[k]; });
+    window.dataLayer.push(d);
+  }
+
+  /* ---- 4. Monta o link do WhatsApp com a origem embutida ---- */
+  function montaLink(msg){
+    var o = leOrigem(), rastro = [];
+    if(o.gclid) rastro.push("gclid: " + o.gclid);
+    if(o.utm_campaign) rastro.push("campanha: " + o.utm_campaign);
+    var texto = msg + (rastro.length ? ("\n\n[" + rastro.join(" | ") + "]") : "");
+    return "https://wa.me/" + FONE + "?text=" + encodeURIComponent(texto);
+  }
+
+  /* ---- 5. Liga todos os CTAs de WhatsApp ---- */
+  document.querySelectorAll("[data-wa]").forEach(function(el){
+    el.addEventListener("click", function(ev){
+      ev.preventDefault();
+      var msg = el.getAttribute("data-msg") || "";
+      var produto = normProduto(el.getAttribute("data-produto"));
+      var posicao = el.getAttribute("data-cta-position") || "desconhecido";
+      push("whatsapp_click", { cta_position: posicao, produto: produto });
+      window.open(montaLink(msg), "_blank", "noopener");
+    });
+  });
+
+  /* ---- 6. Canais de contato que nao sao WhatsApp ---- */
+  document.querySelectorAll("[data-contact]").forEach(function(el){
+    el.addEventListener("click", function(){
+      push("contact_click", {
+        contact_position: el.getAttribute("data-contact-position") || "desconhecido",
+        canal: "email"
+      });
+    });
+  });
+
+  /* ---- 7. Formulario: valida inline e abre o WhatsApp com o pedido pronto ---- */
+  var form = document.getElementById("form-cotacao");
+  if(form){
+    var obrigatorios = ["f-nome","f-fone","f-necessidade"];
+    form.addEventListener("submit", function(ev){
+      ev.preventDefault();
+      var falhou = false;
+      obrigatorios.forEach(function(id){
+        var campo = document.getElementById(id);
+        var caixa = campo.closest(".campo");
+        var vazio = !campo.value.trim();
+        caixa.classList.toggle("invalido", vazio);
+        if(vazio && !falhou){ campo.focus(); falhou = true; }
+      });
+      if(falhou) return;
+
+      var produto = normProduto(document.getElementById("f-produto").value);
+      var nome = document.getElementById("f-nome").value.trim();
+      var empresa = document.getElementById("f-empresa").value.trim();
+      var fone = document.getElementById("f-fone").value.trim();
+      var necessidade = document.getElementById("f-necessidade").value.trim();
+
+      var msg = "Olá! Vim pela página da REPALEX e quero uma cotação de paletes."
+        + "\nNome: " + nome
+        + (empresa ? ("\nEmpresa: " + empresa) : "")
+        + "\nTelefone: " + fone
+        + "\nO que preciso: " + necessidade;
+
+      push("form_submit", { cta_position: "form-fallback", produto: produto });
+      window.open(montaLink(msg), "_blank", "noopener");
+    });
+
+    form.querySelectorAll("input,textarea").forEach(function(c){
+      c.addEventListener("input", function(){
+        if(c.value.trim()) c.closest(".campo").classList.remove("invalido");
+      });
+    });
+  }
+
+  /* ---- 8. Revelar ao rolar ----
+     Alvos escolhidos um a um: bloco de conteudo, nunca texto solto.
+     O hero esta fora de proposito, ver comentario no CSS. */
+  var ALVOS = [
+    ".band .head",
+    ".filtros",
+    "#lista-produtos .card",
+    "#specs .tab-wrap",
+    "#specs .fonte",
+    "#specs .acoes",
+    ".setor",
+    "#setores .acoes",
+    "#compra-usados .duas-colunas>div",
+    ".dif",
+    "#diferenciais .duas-colunas>div",
+    ".passo",
+    "#faq details",
+    "#faq .acoes",
+    ".form-card",
+    ".final h2",
+    ".final .lede",
+    ".final .acoes",
+    ".rod-grid>div"
+  ];
+
+  function revelaTudo(){
+    document.querySelectorAll(".rv").forEach(function(el){
+      el.style.transitionDelay = "0s";
+      el.classList.add("revelado");
+    });
+  }
+  /* Porta de servico para o harness de QA e para captura de tela.
+     Sem isto, todo screenshot de secao fora da dobra sai em branco. */
+  window.__revelaTudo = revelaTudo;
+
+  var reduzMovimento = window.matchMedia
+    && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var itens = [];
+  ALVOS.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el){
+      if(itens.indexOf(el) === -1){ el.classList.add("rv"); itens.push(el); }
+    });
+  });
+
+  /* Escada por grupo: irmaos do mesmo pai entram em sequencia, nao juntos.
+     Teto de 4 degraus para que grade grande nao vire espera. */
+  var contagem = new Map();
+  itens.forEach(function(el){
+    var pai = el.parentNode;
+    var i = contagem.get(pai) || 0;
+    contagem.set(pai, i + 1);
+    el.style.transitionDelay = (Math.min(i, 4) * 80) + "ms";
+  });
+
+  if(reduzMovimento || !("IntersectionObserver" in window)){
+    revelaTudo();
+  } else {
+    var observador = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(e){
+        if(!e.isIntersecting) return;
+        e.target.classList.add("revelado");
+        observador.unobserve(e.target);   /* revela uma vez so */
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    itens.forEach(function(el){ observador.observe(el); });
+
+    /* Quem ja esta na tela no carregamento nao espera evento de rolagem.
+       Cobre recarga com a pagina no meio e link direto para ancora. */
+    requestAnimationFrame(function(){
+      itens.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if(r.top < window.innerHeight && r.bottom > 0){
+          el.classList.add("revelado");
+          observador.unobserve(el);
+        }
+      });
+    });
+
+    /* Rede de seguranca: se por algum motivo o observador nao disparar,
+       nada fica invisivel para sempre. */
+    window.addEventListener("load", function(){
+      setTimeout(function(){
+        itens.forEach(function(el){
+          if(el.getBoundingClientRect().top < window.innerHeight){
+            el.classList.add("revelado");
+          }
+        });
+      }, 1200);
+    });
+  }
+
+  /* Imprimir nunca sai pela metade */
+  window.addEventListener("beforeprint", revelaTudo);
+
+  /* ---- 9. Botao flutuante, regra RF-02 ----
+     Fica oculto no topo (o hero ja tem CTA) e some quando o teclado
+     virtual abre, para nao cobrir o campo em foco no celular. */
+  var fab = document.getElementById("whats-fixo");
+  var alturaInicial = window.innerHeight;
+
+  function atualizaFab(){
+    if(!fab) return;
+    var passouDoHero = window.scrollY > (window.innerHeight * 0.75);
+    var tecladoAberto = window.innerHeight < alturaInicial * 0.75;
+    var focoEmCampo = ["INPUT","TEXTAREA","SELECT"].indexOf(
+      (document.activeElement && document.activeElement.tagName) || ""
+    ) > -1;
+    fab.classList.toggle("fab-hide", !passouDoHero || tecladoAberto || focoEmCampo);
+  }
+
+  /* O listener de rolagem dispara dezenas de vezes por segundo. Sem esta
+     trava, atualizaFab lia innerHeight e mexia em classe a cada evento,
+     dentro do caminho critico da rolagem. Agora roda no maximo uma vez
+     por quadro. */
+  var agendado = false;
+  function pedeAtualizacao(){
+    if(agendado) return;
+    agendado = true;
+    requestAnimationFrame(function(){ agendado = false; atualizaFab(); });
+  }
+
+  window.addEventListener("scroll", pedeAtualizacao, { passive: true });
+  window.addEventListener("resize", pedeAtualizacao);
+  document.addEventListener("focusin", atualizaFab);
+  document.addEventListener("focusout", function(){ setTimeout(atualizaFab, 120); });
+  atualizaFab();
+
+})();
+</script>
+
+</body>
+</html>
