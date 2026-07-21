@@ -1,7 +1,7 @@
 # REPALEX, site (homologacao)
 
 Site da REPALEX, compra, venda e reforma de pallets. Betim, MG.
-Construido a partir do projeto do Figma enviado pelo cliente em 21/07.
+Construido secao a secao a partir dos prints do Figma enviados pelo cliente em 21/07.
 
 **Este repositorio existe para homologacao com a cliente.** A pagina esta com
 `noindex,nofollow` e nao deve receber trafego pago enquanto estiver aqui.
@@ -9,7 +9,7 @@ Construido a partir do projeto do Figma enviado pelo cliente em 21/07.
 ## Estado
 
 - Arquivo unico e autocontido, sem dependencia externa
-- 55 checagens automatizadas passando (instrumentacao, acessibilidade, responsividade)
+- 57 checagens automatizadas passando (instrumentacao, acessibilidade, responsividade)
 - Imagens de dominio publico (CC0), substituidas pelas fotos reais do estoque
   quando a cliente enviar
 - Numeros do bloco de estoque vieram do mock e precisam de confirmacao
