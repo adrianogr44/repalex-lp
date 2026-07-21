@@ -45,9 +45,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @font-face{font-family:'IBM Plex Sans';src:url('assets/fonts/plex-sans-v-latin-400-600.woff2') format('woff2-variations');font-weight:400 600;font-display:swap}
 
 :root{
-  --azul:#123C7A; --azul-esc:#0F2C63; --azul-mid:#1A4B92; --azul-claro:#C9DCF2;
-  --verde:#22A44B; --verde-esc:#1A8C3E; --verde-claro:#4CC46E;
-  --branco:#FFFFFF; --claro:#F5F8FB; --linha:#DDE5EF;
+  --azul:#0B2E6F; --azul-esc:#0C2A66; --azul-mid:#1E3B72; --azul-claro:#C9DCF2;
+  --verde:#0C8846; --verde-esc:#0A6E39; --verde-claro:#3FC06B;
+  --branco:#FFFFFF; --claro:#F4F6F7; --linha:#DFE5EC;
   --ink:#13253F; --muted:#5B6C85;
   --f-tit:'Archivo','Arial Narrow',Arial,sans-serif;
   --f-txt:'IBM Plex Sans','Segoe UI',Arial,sans-serif;
@@ -71,8 +71,8 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 
 /* Botoes, cantos bem arredondados como no print */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  font-family:var(--f-txt);font-weight:600;font-size:13.5px;text-transform:uppercase;
-  letter-spacing:.03em;line-height:1;padding:14px 26px;border-radius:var(--pill);
+  font-family:var(--f-txt);font-weight:600;font-size:14px;text-transform:uppercase;
+  letter-spacing:.03em;line-height:1;padding:16px 30px;border-radius:var(--pill);
   border:2px solid transparent;text-decoration:none;cursor:pointer;white-space:nowrap;
   transition:transform .15s,background .15s,color .15s}
 .btn:hover{transform:translateY(-2px)}
@@ -85,32 +85,32 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 
 /* Cabecalho */
 .topo{position:sticky;top:0;z-index:60;background:#fff;box-shadow:0 2px 12px rgba(15,44,99,.08)}
-.topo .wrap{display:flex;align-items:center;gap:18px;height:92px}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:104px}
 .marca{flex:none;display:block;text-decoration:none}
-.marca img{height:70px;width:auto}
-.nav{display:none;margin-left:auto;gap:26px;font-size:12.5px;font-weight:600;
+.marca img{height:86px;width:auto}
+.nav{display:none;margin-left:auto;gap:30px;font-size:13px;font-weight:700;
   text-transform:uppercase;letter-spacing:.03em}
 .nav a{text-decoration:none;color:var(--azul);padding:5px 0;border-bottom:2px solid transparent}
 .nav a:hover{color:var(--verde)}
 .nav a.on{color:var(--verde);border-bottom-color:var(--verde)}
 .topo .btn{margin-left:auto}
 @media (min-width:1120px){.nav{display:flex}.topo .btn{margin-left:0}}
-@media (max-width:700px){.topo .wrap{height:76px}.marca img{height:56px}
+@media (max-width:700px){.topo .wrap{height:82px}.marca img{height:62px}
   .topo .btn{padding:12px 18px;font-size:12px}}
 @media (max-width:400px){.marca img{height:48px}.topo .btn{padding:11px 14px;font-size:11px}}
 
 /* Hero */
 .hero{position:relative;background:#fff;overflow:hidden}
-.hero-foto{position:absolute;inset:0;left:44%;background-size:cover;background-position:center}
+.hero-foto{position:absolute;inset:0;left:47%;background-size:cover;background-position:center}
 /* borda diagonal suave entre o texto e a foto, como no print */
 .hero-foto::before{content:"";position:absolute;inset:0;
   background:linear-gradient(100deg,#fff 0%,#fff 12%,rgba(255,255,255,0) 46%)}
 .hero .wrap{position:relative;z-index:3;
   padding-top:clamp(46px,6.2vw,80px);padding-bottom:clamp(58px,7vw,98px)}
-.hero-txt{max-width:660px}
-.hero h1{font-size:clamp(26px,4.35vw,41px);color:var(--azul-esc);line-height:1.12;letter-spacing:0}
+.hero-txt{max-width:845px}
+.hero h1{font-size:clamp(28px,3.7vw,52px);color:var(--azul-esc);line-height:1.13;letter-spacing:-.015em}
 .hero h1 em{font-style:normal;color:var(--verde);display:block}
-.hero p{margin-top:24px;font-size:clamp(14.5px,1.6vw,16.5px);color:var(--ink);max-width:430px;line-height:1.75}
+.hero p{margin-top:24px;font-size:clamp(15px,1.25vw,17px);color:var(--ink);max-width:470px;line-height:1.75}
 .hero .acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
 /* faixa azul com fio verde cruzando a base da foto */
 .faixa{position:absolute;left:0;right:0;bottom:0;z-index:2;width:100%;height:auto;pointer-events:none}
@@ -125,7 +125,7 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .duo-foto{min-height:290px;background-size:cover;background-position:center}
 .duo-txt{background:#fff;display:flex;flex-direction:column;justify-content:center;
   padding:clamp(40px,5vw,72px) clamp(22px,4.4vw,72px)}
-.duo-txt h2{font-size:clamp(23px,3.2vw,31px);color:var(--azul-esc)}
+.duo-txt h2{font-size:clamp(24px,2.6vw,36px);color:var(--azul-esc)}
 .duo-txt p{margin-top:22px;color:var(--muted);font-size:15.5px;line-height:1.8;max-width:520px}
 .risco{width:58px;height:4px;background:var(--verde);border-radius:2px;margin-top:14px}
 /* no print este botao e retangular, nao arredondado como os do hero */
@@ -135,7 +135,7 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 
 /* ---------- PARTE 2: Por que escolher ---------- */
 .porque{background:var(--azul-esc);color:#fff;padding:clamp(46px,5.6vw,66px) 0}
-.porque h2{font-size:clamp(21px,2.9vw,28px);text-align:center;color:#fff}
+.porque h2{font-size:clamp(22px,2.5vw,34px);text-align:center;color:#fff}
 .porque .risco{margin:14px auto 0}
 .motivos{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 14px;margin-top:40px}
 @media (min-width:640px){.motivos{grid-template-columns:repeat(3,1fr)}}
@@ -144,11 +144,15 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .motivo svg{width:42px;height:42px;margin:0 auto 14px;stroke:var(--verde-claro);fill:none;
   stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .motivo span{display:block;font-size:13px;font-weight:600;line-height:1.4;color:#fff}
+@media (min-width:1040px){
+  .motivo{position:relative}
+  .motivo:not(:first-child)::before{content:"";position:absolute;left:-10px;top:6px;bottom:6px;width:1px;background:rgba(255,255,255,.20)}
+}
 
 /* ---------- PARTE 3: Produtos e servicos ---------- */
 .secao{padding:var(--secao) 0}
 .claro{background:var(--claro)}
-.tit-c{font-size:clamp(22px,3.1vw,30px);color:var(--azul-esc);text-align:center}
+.tit-c{font-size:clamp(24px,2.6vw,36px);color:var(--azul-esc);text-align:center}
 .tit-c+.risco{margin-left:auto;margin-right:auto}
 .cards{display:grid;gap:24px;margin-top:46px;grid-template-columns:1fr}
 @media (min-width:620px){.cards{grid-template-columns:repeat(2,1fr)}}
@@ -165,13 +169,13 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .card-corpo{padding:22px 22px 26px}
 .card h3{font-size:15.5px;color:var(--azul-esc);letter-spacing:.01em}
 .card ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:9px}
-.card li{position:relative;padding-left:16px;font-size:14.5px;color:var(--muted)}
+.card li{position:relative;padding-left:16px;font-size:14.5px;color:#44536B}
 .card li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;
-  border-radius:50%;background:var(--verde)}
+  border-radius:50%;background:#25344F}
 
 /* ---------- PARTE 3: Estoque disponivel ---------- */
 .est-topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px}
-.est-topo h2{font-size:clamp(21px,2.9vw,28px);color:var(--azul-esc)}
+.est-topo h2{font-size:clamp(22px,2.5vw,34px);color:var(--azul-esc)}
 .selo-att{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
   color:var(--verde);padding-bottom:4px}
 .estoques{display:grid;gap:18px;margin-top:32px;grid-template-columns:1fr}
@@ -179,7 +183,7 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 @media (min-width:980px){.estoques{grid-template-columns:repeat(4,1fr)}}
 .est{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:16px 18px;
   display:flex;align-items:center;gap:15px;min-width:0;box-shadow:0 3px 12px rgba(15,44,99,.05)}
-.est img{width:78px;height:56px;object-fit:cover;border-radius:5px;flex:none}
+.est img{width:78px;height:56px;object-fit:contain;background:#fff;border-radius:5px;flex:none}
 .est-dado{min-width:0}
 .est h4{font-size:11.5px;color:var(--azul-esc);line-height:1.3;letter-spacing:.03em;overflow-wrap:anywhere}
 .est b{display:block;font-family:var(--f-tit);font-weight:800;font-size:27px;color:var(--verde);
@@ -190,12 +194,12 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .galeria{display:grid;gap:16px;margin-top:44px;grid-template-columns:repeat(2,1fr)}
 @media (min-width:720px){.galeria{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:1020px){.galeria{grid-template-columns:repeat(5,1fr)}}
-.galeria img{width:100%;height:auto;aspect-ratio:560/420;object-fit:cover;border-radius:8px}
+.galeria img{width:100%;height:auto;aspect-ratio:437/380;object-fit:cover;border-radius:6px}
 .centro{text-align:center;margin-top:32px}
 
 /* ---------- PARTE 4: Rodape ----------
    No print o rodape e claro, nao azul. */
-.rodape{background:var(--claro);color:var(--ink);padding:clamp(44px,5vw,62px) 0 0;
+.rodape{background:#fff;color:var(--ink);padding:clamp(44px,5vw,62px) 0 0;
   border-top:1px solid var(--linha)}
 .rod-grid{display:grid;gap:34px}
 @media (min-width:760px){.rod-grid{grid-template-columns:1.3fr 1.2fr 1fr .8fr}}
@@ -214,7 +218,7 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 
 /* ---------- PARTE 5: Solicite seu orcamento ---------- */
 .orc-secao{background:var(--azul-esc);color:#fff;padding:clamp(48px,5.6vw,72px) 0}
-.orc-secao h2{font-size:clamp(21px,2.9vw,28px);color:#fff}
+.orc-secao h2{font-size:clamp(22px,2.5vw,34px);color:#fff}
 .orc{display:grid;gap:24px;margin-top:36px}
 @media (min-width:940px){.orc{grid-template-columns:1.55fr 1fr;gap:28px}}
 .form-card{background:#fff;border-radius:10px;padding:clamp(22px,2.8vw,30px)}
@@ -246,7 +250,8 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .fale small{display:block;color:var(--azul-claro);font-size:13px;margin-top:2px}
 
 /* barra final, branca como no print */
-.rod-fim{background:#fff;border-top:1px solid var(--linha);padding:22px 0 26px;font-size:13px;color:var(--muted)}
+.rod-fim{background:#F6F7F9;border-top:1px solid var(--linha);padding:20px 0 24px;font-size:13px;color:var(--muted)}
+.rod-fim span{display:block;margin-top:3px}
 .rod-fim strong{display:block;color:var(--azul-esc);font-size:13.5px;letter-spacing:.02em;margin-bottom:4px}
 
 /* Botao flutuante */
@@ -280,6 +285,7 @@ html.js .rv.revelado{opacity:1;transform:none}
       <a href="#produtos">Produtos e serviços</a>
       <a href="#estoque">Estoque</a>
       <a href="#galeria">Galeria</a>
+      <a href="#">Blog</a>
       <a href="#contato">Contato</a>
     </nav>
     <a class="btn btn-verde" href="#" data-wa data-cta-position="topo" data-produto="indefinido"
@@ -295,9 +301,9 @@ html.js .rv.revelado{opacity:1;transform:none}
 <section class="hero" id="inicio">
   <div class="hero-foto" style="background-image:url('assets/img/v5-hero.jpg')" role="img"
        aria-label="Pilhas de pallets de madeira em pátio, com empilhadeira"></div>
-  <svg class="faixa" viewBox="0 0 1440 74" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 74 L0 58 C 340 58 700 30 1010 14 C 1180 5 1320 2 1440 0 L1440 74 Z" fill="#22A44B"/>
-    <path d="M0 74 L0 66 C 340 66 700 40 1010 24 C 1180 15 1320 12 1440 10 L1440 74 Z" fill="#0F2C63"/>
+  <svg class="faixa" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 100 L0 84 C 260 84 560 46 880 26 C 1090 13 1290 7 1440 5 L1440 100 Z" fill="#0C8846"/>
+    <path d="M0 100 L0 93 C 260 93 560 58 880 38 C 1090 25 1290 19 1440 17 L1440 100 Z" fill="#0C2A66"/>
   </svg>
   <div class="wrap">
     <div class="hero-txt">
@@ -587,12 +593,13 @@ html.js .rv.revelado{opacity:1;transform:none}
         <div class="rod-links">
           <ul>
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#quem-somos">Quem somos</a></li>
-            <li><a href="#produtos">Produtos e serviços</a></li>
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#produtos">Produtos e Serviços</a></li>
             <li><a href="#estoque">Estoque</a></li>
           </ul>
           <ul>
             <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#">Blog</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
@@ -602,9 +609,9 @@ html.js .rv.revelado{opacity:1;transform:none}
         <h4>Nossos produtos</h4>
         <ul>
           <li><a href="#produtos">Pallets PBR</a></li>
-          <li><a href="#produtos">Pallets descartáveis</a></li>
-          <li><a href="#produtos">Pallets sob medida</a></li>
-          <li><a href="#produtos">Pallets pad</a></li>
+          <li><a href="#produtos">Pallets Descartáveis</a></li>
+          <li><a href="#produtos">Pallets Sob Medida</a></li>
+          <li><a href="#produtos">Pallets Pad</a></li>
         </ul>
       </div>
 
@@ -620,8 +627,9 @@ html.js .rv.revelado{opacity:1;transform:none}
   </div>
   <div class="rod-fim">
     <div class="wrap">
-      <strong>REPALEX Paletes LTDA</strong>
-      <span>Betim, MG. Segunda a sexta, 07:30 às 17:30.</span>
+      <strong>REPALEX PALETES LTDA</strong>
+      <span>CNPJ: 00.000.000/0001-00</span>
+      <span>© 2026 Repalex. Todos os direitos reservados.</span>
     </div>
   </div>
 </footer>
