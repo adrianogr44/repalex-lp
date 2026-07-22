@@ -164,51 +164,22 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
   .cards>.card:nth-child(5){grid-column:4/6}
 }
 .card{background:#fff;border:1px solid var(--linha);border-radius:10px;overflow:hidden;
-  display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(15,44,99,.08);
-  position:relative;transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,42,102,.16)}
-/* fio verde que corre no topo do card */
-.card::before{content:"";position:absolute;top:0;left:0;height:4px;width:0;
-  background:var(--verde);z-index:2;transition:width .3s}
-.card:hover::before{width:100%}
-.card-foto{position:relative;overflow:hidden}
-.card img{width:100%;height:auto;aspect-ratio:700/460;object-fit:cover;transition:transform .45s ease}
-.card:hover img{transform:scale(1.06)}
-/* barra de cotacao que sobe da base da foto */
-.card-cta{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;
-  justify-content:center;gap:9px;padding:13px 10px;background:var(--verde);color:#fff;
-  font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;
-  text-decoration:none;transform:translateY(102%);transition:transform .3s}
-.card:hover .card-cta,.card:focus-within .card-cta{transform:none}
-.card-cta:hover{background:var(--verde-esc)}
-.card-cta:focus-visible{outline:3px solid var(--verde-claro);outline-offset:-3px}
-/* celular nao tem hover: a barra fica sempre visivel */
-@media (hover:none){.card-cta{transform:none}}
-.card:hover h3{color:var(--verde)}
-.card h3{transition:color .2s}
-.card-corpo{padding:22px 22px 26px}
+  display:flex;flex-direction:column}
+.card-foto{border-bottom:1px solid var(--linha)}
+.card img{display:block;width:100%;height:auto;aspect-ratio:700/460;object-fit:cover}
+.card-corpo{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
 .card h3{font-size:15.5px;color:var(--azul-esc);letter-spacing:.01em}
-.card ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:9px}
+.card ul{list-style:none;margin:12px 0 18px;padding:0;display:grid;gap:8px}
 .card li{position:relative;padding-left:16px;font-size:14.5px;color:#44536B}
 .card li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;
-  border-radius:50%;background:#25344F}
-
-/* ---------- PARTE 3: Estoque disponivel ---------- */
-.est-topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px}
-.est-topo h2{font-size:clamp(22px,2.5vw,34px);color:var(--azul-esc)}
-.selo-att{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
-  color:var(--verde);padding-bottom:4px}
-.estoques{display:grid;gap:18px;margin-top:32px;grid-template-columns:1fr}
-@media (min-width:560px){.estoques{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:980px){.estoques{grid-template-columns:repeat(4,1fr)}}
-.est{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:16px 18px;
-  display:flex;align-items:center;gap:15px;min-width:0;box-shadow:0 3px 12px rgba(15,44,99,.05)}
-.est img{width:78px;height:56px;object-fit:contain;background:#fff;border-radius:5px;flex:none}
-.est-dado{min-width:0}
-.est h4{font-size:11.5px;color:var(--azul-esc);line-height:1.3;letter-spacing:.03em;overflow-wrap:anywhere}
-.est b{display:block;font-family:var(--f-tit);font-weight:800;font-size:27px;color:var(--verde);
-  line-height:1.1;margin-top:7px}
-.est small{color:var(--muted);font-size:12.5px}
+  border-radius:50%;background:var(--verde)}
+/* CTA sempre visivel, alinhado na base do card */
+.card-cta{margin-top:auto;padding-top:15px;border-top:1px solid var(--linha);
+  display:flex;align-items:center;gap:8px;color:var(--verde-esc);
+  font-weight:700;font-size:13px;letter-spacing:.03em;text-decoration:none}
+.card-cta .ico{width:16px;height:16px;flex:none}
+.card-cta:hover{text-decoration:underline}
+.card-cta:focus-visible{outline:3px solid var(--verde-claro);outline-offset:2px;border-radius:3px}
 
 /* ---------- PARTE 4: Galeria ---------- */
 .galeria{display:grid;gap:16px;margin-top:44px;grid-template-columns:repeat(2,1fr)}
@@ -303,9 +274,7 @@ html.js .rv.revelado{opacity:1;transform:none}
       <a href="#inicio" class="on">Início</a>
       <a href="#quem-somos">Quem somos</a>
       <a href="#produtos">Produtos e serviços</a>
-      <a href="#estoque">Estoque</a>
       <a href="#galeria">Galeria</a>
-      <a href="#">Blog</a>
       <a href="#contato">Contato</a>
     </nav>
     <a class="btn btn-verde" href="#" data-wa data-cta-position="topo" data-produto="indefinido"
@@ -399,84 +368,54 @@ html.js .rv.revelado{opacity:1;transform:none}
 
       <article class="card rv">
         <div class="card-foto"><picture><source srcset="assets/img/v5-prod-pbr.webp" type="image/webp">
-          <img src="assets/img/v5-prod-pbr.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets PBR de madeira"></picture><a class="card-cta" href="#" data-wa data-cta-position="card-pbr" data-produto="pbr" data-msg="Quero cotar Pallets PBR na REPALEX. Novo, reformado ou usado: ___ | Quantidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a></div>
+          <img src="assets/img/v5-prod-pbr.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets PBR de madeira"></picture></div>
         <div class="card-corpo">
           <h3>Pallets PBR</h3>
           <ul><li>Novos</li><li>Reformados</li><li>Usados</li></ul>
+          <a class="card-cta" href="#" data-wa data-cta-position="card-pbr" data-produto="pbr" data-msg="Quero cotar Pallets PBR na REPALEX. Novo, reformado ou usado: ___ | Quantidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a>
         </div>
       </article>
 
       <article class="card rv">
         <div class="card-foto"><picture><source srcset="assets/img/v5-prod-desc.webp" type="image/webp">
-          <img src="assets/img/v5-prod-desc.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets descartáveis de madeira"></picture><a class="card-cta" href="#" data-wa data-cta-position="card-descartavel" data-produto="descartavel" data-msg="Quero cotar Pallets descartáveis na REPALEX. Medida: ___ | Quantidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a></div>
+          <img src="assets/img/v5-prod-desc.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets descartáveis de madeira"></picture></div>
         <div class="card-corpo">
           <h3>Pallets descartáveis</h3>
           <ul><li>1200x1000</li><li>Outras medidas</li></ul>
+          <a class="card-cta" href="#" data-wa data-cta-position="card-descartavel" data-produto="descartavel" data-msg="Quero cotar Pallets descartáveis na REPALEX. Medida: ___ | Quantidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a>
         </div>
       </article>
 
       <article class="card rv">
         <div class="card-foto"><picture><source srcset="assets/img/v5-prod-medida.webp" type="image/webp">
-          <img src="assets/img/v5-prod-medida.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets fabricados sob medida"></picture><a class="card-cta" href="#" data-wa data-cta-position="card-sob-medida" data-produto="sob-medida" data-msg="Preciso de pallets sob medida na REPALEX. Medida e carga: ___ | Quantidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a></div>
+          <img src="assets/img/v5-prod-medida.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets fabricados sob medida"></picture></div>
         <div class="card-corpo">
           <h3>Pallets sob medida</h3>
           <ul><li>Fabricados conforme seu projeto</li></ul>
+          <a class="card-cta" href="#" data-wa data-cta-position="card-sob-medida" data-produto="sob-medida" data-msg="Preciso de pallets sob medida na REPALEX. Medida e carga: ___ | Quantidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a>
         </div>
       </article>
 
       <article class="card rv">
         <div class="card-foto"><picture><source srcset="assets/img/v5-prod-compra.webp" type="image/webp">
-          <img src="assets/img/v5-prod-compra.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets usados reunidos para compra"></picture><a class="card-cta" href="#" data-wa data-cta-position="card-compra-usados" data-produto="compra-usados" data-msg="Tenho pallets usados e quero uma proposta de compra da REPALEX. Quantidade: ___ | Cidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Vender meus pallets</a></div>
+          <img src="assets/img/v5-prod-compra.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets usados reunidos para compra"></picture></div>
         <div class="card-corpo">
           <h3>Compra de pallets usados</h3>
           <ul><li>Coleta</li><li>Avaliação</li><li>Pagamento</li></ul>
+          <a class="card-cta" href="#" data-wa data-cta-position="card-compra-usados" data-produto="compra-usados" data-msg="Tenho pallets usados e quero uma proposta de compra da REPALEX. Quantidade: ___ | Cidade: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Vender meus pallets</a>
         </div>
       </article>
 
       <article class="card rv">
         <div class="card-foto"><picture><source srcset="assets/img/v5-prod-reforma.webp" type="image/webp">
-          <img src="assets/img/v5-prod-reforma.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets em processo de reforma"></picture><a class="card-cta" href="#" data-wa data-cta-position="card-reforma" data-produto="reforma" data-msg="Quero cotar reforma de pallets na REPALEX. Quantidade: ___ | Estado atual: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a></div>
+          <img src="assets/img/v5-prod-reforma.jpg" width="700" height="460" loading="lazy" decoding="async" alt="Pallets em processo de reforma"></picture></div>
         <div class="card-corpo">
           <h3>Reforma de pallets</h3>
           <ul><li>Troca de tábuas</li><li>Reforço estrutural</li><li>Padronização</li></ul>
+          <a class="card-cta" href="#" data-wa data-cta-position="card-reforma" data-produto="reforma" data-msg="Quero cotar reforma de pallets na REPALEX. Quantidade: ___ | Estado atual: ___"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg> Cotar no WhatsApp</a>
         </div>
       </article>
 
-    </div>
-  </div>
-</section>
-
-<!-- Estoque disponivel -->
-<section class="secao" id="estoque">
-  <div class="wrap">
-    <div class="est-topo rv">
-      <div>
-        <h2>Estoque disponível</h2>
-        <div class="risco"></div>
-      </div>
-      <span class="selo-att">Atualizado diariamente</span>
-    </div>
-    <div class="estoques">
-      <div class="est rv">
-        <picture><source srcset="assets/img/v5-est-1.webp" type="image/webp">
-          <img src="assets/img/v5-est-1.jpg" width="300" height="210" loading="lazy" alt=""></picture>
-        <div class="est-dado"><h4>PBR reformado</h4><b>1.250</b><small>unidades</small></div>
-      </div>
-      <div class="est rv">
-        <picture><source srcset="assets/img/v5-est-2.webp" type="image/webp">
-          <img src="assets/img/v5-est-2.jpg" width="300" height="210" loading="lazy" alt=""></picture>
-        <div class="est-dado"><h4>PBR novo</h4><b>350</b><small>unidades</small></div>
-      </div>
-      <div class="est rv">
-        <picture><source srcset="assets/img/v5-est-3.webp" type="image/webp">
-          <img src="assets/img/v5-est-3.jpg" width="300" height="210" loading="lazy" alt=""></picture>
-        <div class="est-dado"><h4>Descartável 1200x1000</h4><b>800</b><small>unidades</small></div>
-      </div>
-      <div class="est rv">
-        <picture><source srcset="assets/img/v5-est-4.webp" type="image/webp">
-          <img src="assets/img/v5-est-4.jpg" width="300" height="210" loading="lazy" alt=""></picture>
-        <div class="est-dado"><h4>Pallet pad</h4><b>600</b><small>unidades</small></div>
-      </div>
     </div>
   </div>
 </section>
@@ -501,7 +440,7 @@ html.js .rv.revelado{opacity:1;transform:none}
     <div class="centro rv">
       <a class="btn btn-quadro" style="align-self:auto;margin-top:0" href="#" data-wa
          data-cta-position="galeria" data-produto="indefinido"
-         data-msg="Vi a galeria no site da REPALEX e queria ver mais fotos do estoque disponível.">Ver mais fotos</a>
+         data-msg="Vi a galeria no site da REPALEX e queria ver mais fotos dos pallets.">Ver mais fotos</a>
     </div>
   </div>
 </section>
@@ -615,11 +554,9 @@ html.js .rv.revelado{opacity:1;transform:none}
             <li><a href="#inicio">Início</a></li>
             <li><a href="#quem-somos">Quem Somos</a></li>
             <li><a href="#produtos">Produtos e Serviços</a></li>
-            <li><a href="#estoque">Estoque</a></li>
           </ul>
           <ul>
             <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
@@ -648,7 +585,6 @@ html.js .rv.revelado{opacity:1;transform:none}
   <div class="rod-fim">
     <div class="wrap">
       <strong>REPALEX PALETES LTDA</strong>
-      <span>CNPJ: 00.000.000/0001-00</span>
       <span>© 2026 Repalex. Todos os direitos reservados.</span>
     </div>
   </div>
