@@ -211,13 +211,14 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .emb-intro{margin-top:18px;color:var(--azul-claro);font-size:15px;max-width:560px;line-height:1.75}
 .emb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px}
 @media (max-width:679px){.emb-grid .emb-item:nth-child(5){grid-column:1/-1}}
-@media (min-width:680px) and (max-width:999px){.emb-grid{grid-template-columns:repeat(6,1fr)}
+/* 3 + 2 centralizados a partir do tablet: cards grandes, sem item orfao */
+@media (min-width:680px){.emb-grid{grid-template-columns:repeat(6,1fr);gap:18px}
   .emb-grid .emb-item{grid-column:span 2}
   .emb-grid .emb-item:nth-child(4){grid-column:2/span 2}}
-@media (min-width:1000px){.emb-grid{grid-template-columns:repeat(5,1fr)}}
-.emb-item{background:var(--azul-mid);border-radius:10px;padding:10px 10px 16px;text-align:center}
-.emb-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:7px;display:block}
-.emb-item span{display:block;font-size:13.5px;font-weight:600;color:#fff;line-height:1.4;margin-top:12px}
+@media (min-width:1000px){.emb-grid{gap:22px;margin-top:40px}}
+.emb-item{background:var(--azul-mid);border-radius:10px;padding:12px 12px 18px;text-align:center}
+.emb-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block}
+.emb-item span{display:block;font-size:14.5px;font-weight:600;color:#fff;line-height:1.4;margin-top:14px}
 .emb .centro{margin-top:34px}
 
 /* Por que escolher */
@@ -509,27 +510,27 @@ html.js .rv.revelado{opacity:1;transform:none}
     <div class="emb-grid">
       <div class="emb-item rv">
         <picture><source srcset="assets/img/v6-emb-caixas.webp" type="image/webp">
-          <img src="assets/img/v6-emb-caixas.jpg" width="400" height="300" loading="lazy" decoding="async" alt="Caixa de madeira fechada para transporte"></picture>
+          <img src="assets/img/v6-emb-caixas.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Caixa de madeira fechada para transporte"></picture>
         <span>Caixas de madeira</span>
       </div>
       <div class="emb-item rv">
         <picture><source srcset="assets/img/v6-emb-gaiolas.webp" type="image/webp">
-          <img src="assets/img/v6-emb-gaiolas.jpg" width="400" height="300" loading="lazy" decoding="async" alt="Gaiola de madeira com laterais vazadas"></picture>
+          <img src="assets/img/v6-emb-gaiolas.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Gaiola de madeira com laterais vazadas"></picture>
         <span>Gaiolas de madeira</span>
       </div>
       <div class="emb-item rv">
         <picture><source srcset="assets/img/v6-emb-estrados.webp" type="image/webp">
-          <img src="assets/img/v6-emb-estrados.jpg" width="400" height="300" loading="lazy" decoding="async" alt="Estrado de madeira baixo"></picture>
+          <img src="assets/img/v6-emb-estrados.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Estrado de madeira baixo"></picture>
         <span>Estrados</span>
       </div>
       <div class="emb-item rv">
         <picture><source srcset="assets/img/v6-emb-sobmedida.webp" type="image/webp">
-          <img src="assets/img/v6-emb-sobmedida.jpg" width="400" height="300" loading="lazy" decoding="async" alt="Embalagem de madeira sob medida"></picture>
+          <img src="assets/img/v6-emb-sobmedida.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Embalagem de madeira sob medida"></picture>
         <span>Embalagens sob medida</span>
       </div>
       <div class="emb-item rv">
         <picture><source srcset="assets/img/v6-emb-pecas.webp" type="image/webp">
-          <img src="assets/img/v6-emb-pecas.jpg" width="400" height="300" loading="lazy" decoding="async" alt="Peças e suportes de madeira"></picture>
+          <img src="assets/img/v6-emb-pecas.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Peças e suportes de madeira"></picture>
         <span>Peças e suportes</span>
       </div>
     </div>
