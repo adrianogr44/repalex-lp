@@ -211,14 +211,15 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .emb-intro{margin-top:18px;color:var(--azul-claro);font-size:15px;max-width:560px;line-height:1.75}
 .emb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px}
 @media (max-width:679px){.emb-grid .emb-item:nth-child(5){grid-column:1/-1}}
-/* 3 + 2 centralizados a partir do tablet: cards grandes, sem item orfao */
-@media (min-width:680px){.emb-grid{grid-template-columns:repeat(6,1fr);gap:18px}
+/* tablet: 3 + 2 centralizados; desktop: 5 compactos em linha, como no mock */
+@media (min-width:680px) and (max-width:999px){.emb-grid{grid-template-columns:repeat(6,1fr)}
   .emb-grid .emb-item{grid-column:span 2}
   .emb-grid .emb-item:nth-child(4){grid-column:2/span 2}}
-@media (min-width:1000px){.emb-grid{gap:22px;margin-top:40px}}
-.emb-item{background:var(--azul-mid);border-radius:10px;padding:12px 12px 18px;text-align:center}
-.emb-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block}
-.emb-item span{display:block;font-size:14.5px;font-weight:600;color:#fff;line-height:1.4;margin-top:14px}
+@media (min-width:1000px){.emb-grid{grid-template-columns:repeat(5,1fr)}}
+.emb-item{background:var(--azul-mid);border-radius:10px;padding:22px 16px;text-align:center}
+.emb-item svg{width:38px;height:38px;margin:0 auto 12px;stroke:var(--verde-claro);fill:none;
+  stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.emb-item span{display:block;font-size:13.5px;font-weight:600;color:#fff;line-height:1.4}
 .emb .centro{margin-top:34px}
 
 /* Por que escolher */
@@ -509,28 +510,23 @@ html.js .rv.revelado{opacity:1;transform:none}
     <p class="emb-intro rv">Além dos pallets, fabricamos embalagens de madeira para transporte e armazenamento, no padrão que a sua carga exige.</p>
     <div class="emb-grid">
       <div class="emb-item rv">
-        <picture><source srcset="assets/img/v6-emb-caixas.webp" type="image/webp">
-          <img src="assets/img/v6-emb-caixas.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Caixa de madeira fechada para transporte"></picture>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 11 16 5l12 6v10l-12 6-12-6z"/><path d="M4 11l12 6 12-6M16 17v10"/></svg>
         <span>Caixas de madeira</span>
       </div>
       <div class="emb-item rv">
-        <picture><source srcset="assets/img/v6-emb-gaiolas.webp" type="image/webp">
-          <img src="assets/img/v6-emb-gaiolas.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Gaiola de madeira com laterais vazadas"></picture>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="1.5"/><path d="M9 7v18M14.5 7v18M20 7v18M25 7v18"/></svg>
         <span>Gaiolas de madeira</span>
       </div>
       <div class="emb-item rv">
-        <picture><source srcset="assets/img/v6-emb-estrados.webp" type="image/webp">
-          <img src="assets/img/v6-emb-estrados.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Estrado de madeira baixo"></picture>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 18h26v6H3z"/><path d="M6 24v3M26 24v3M16 24v3M3 21h26"/></svg>
         <span>Estrados</span>
       </div>
       <div class="emb-item rv">
-        <picture><source srcset="assets/img/v6-emb-sobmedida.webp" type="image/webp">
-          <img src="assets/img/v6-emb-sobmedida.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Embalagem de madeira sob medida"></picture>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="9" width="17" height="14" rx="1.5"/><path d="M25 12h3M25 16h3M25 20h3M8 9V6M13.5 9V6M19 9V6"/></svg>
         <span>Embalagens sob medida</span>
       </div>
       <div class="emb-item rv">
-        <picture><source srcset="assets/img/v6-emb-pecas.webp" type="image/webp">
-          <img src="assets/img/v6-emb-pecas.jpg" width="680" height="510" loading="lazy" decoding="async" alt="Peças e suportes de madeira"></picture>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="17" width="11" height="9" rx="1"/><rect x="17" y="17" width="11" height="9" rx="1"/><rect x="10.5" y="7" width="11" height="9" rx="1"/></svg>
         <span>Peças e suportes</span>
       </div>
     </div>
