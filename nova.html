@@ -211,15 +211,17 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .emb-intro{margin-top:18px;color:var(--azul-claro);font-size:15px;max-width:560px;line-height:1.75}
 .emb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px}
 @media (max-width:679px){.emb-grid .emb-item:nth-child(5){grid-column:1/-1}}
-/* tablet: 3 + 2 centralizados; desktop: 5 compactos em linha, como no mock */
-@media (min-width:680px) and (max-width:999px){.emb-grid{grid-template-columns:repeat(6,1fr)}
-  .emb-grid .emb-item{grid-column:span 2}
-  .emb-grid .emb-item:nth-child(4){grid-column:2/span 2}}
-@media (min-width:1000px){.emb-grid{grid-template-columns:repeat(5,1fr)}}
-.emb-item{background:var(--azul-mid);border-radius:10px;padding:22px 16px;text-align:center}
-.emb-item svg{width:38px;height:38px;margin:0 auto 12px;stroke:var(--verde-claro);fill:none;
-  stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.emb-item span{display:block;font-size:13.5px;font-weight:600;color:#fff;line-height:1.4}
+/* dupla: foto real de um lado, categorias e CTA do outro */
+.emb-duo{display:grid;gap:30px;margin-top:36px;align-items:center}
+@media (min-width:900px){.emb-duo{grid-template-columns:1fr 1.08fr;gap:44px}}
+.emb-foto img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.emb-lista{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:13px;grid-template-columns:1fr}
+@media (min-width:560px){.emb-lista{grid-template-columns:1fr 1fr}}
+.emb-lista li{display:flex;align-items:center;gap:12px;font-size:14.5px;font-weight:600;color:#fff;
+  background:var(--azul-mid);border-radius:9px;padding:13px 15px}
+.emb-lista svg{width:26px;height:26px;flex:none;stroke:var(--verde-claro);fill:none;
+  stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.emb .btn-verde{margin-top:26px}
 .emb .centro{margin-top:34px}
 
 /* Por que escolher */
@@ -505,37 +507,43 @@ html.js .rv.revelado{opacity:1;transform:none}
 <!-- Embalagens de madeira, faixa azul como no mock -->
 <section class="emb" id="embalagens">
   <div class="wrap">
-    <h2 class="rv">Embalagens de madeira</h2>
-    <div class="risco rv"></div>
-    <p class="emb-intro rv">Além dos pallets, fabricamos embalagens de madeira para transporte e armazenamento, no padrão que a sua carga exige.</p>
-    <div class="emb-grid">
-      <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 11 16 5l12 6v10l-12 6-12-6z"/><path d="M4 11l12 6 12-6M16 17v10"/></svg>
-        <span>Caixas de madeira</span>
+    <div class="emb-duo">
+      <div class="emb-foto rv">
+        <picture><source srcset="assets/img/v6-emb-foto.webp" type="image/webp">
+          <img src="assets/img/v6-emb-foto.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Engradados de madeira empilhados"></picture>
       </div>
-      <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="1.5"/><path d="M9 7v18M14.5 7v18M20 7v18M25 7v18"/></svg>
-        <span>Gaiolas de madeira</span>
+      <div class="emb-txt">
+        <h2 class="rv">Embalagens de madeira</h2>
+        <div class="risco rv"></div>
+        <p class="emb-intro rv">Além dos pallets, fabricamos embalagens de madeira para transporte e armazenamento, no padrão que a sua carga exige.</p>
+        <ul class="emb-lista">
+          <li class="rv">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 11 16 5l12 6v10l-12 6-12-6z"/><path d="M4 11l12 6 12-6M16 17v10"/></svg>
+            Caixas de madeira
+          </li>
+          <li class="rv">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="1.5"/><path d="M9 7v18M14.5 7v18M20 7v18M25 7v18"/></svg>
+            Gaiolas de madeira
+          </li>
+          <li class="rv">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 18h26v6H3z"/><path d="M6 24v3M26 24v3M16 24v3M3 21h26"/></svg>
+            Estrados
+          </li>
+          <li class="rv">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="9" width="17" height="14" rx="1.5"/><path d="M25 12h3M25 16h3M25 20h3M8 9V6M13.5 9V6M19 9V6"/></svg>
+            Embalagens sob medida
+          </li>
+          <li class="rv">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="17" width="11" height="9" rx="1"/><rect x="17" y="17" width="11" height="9" rx="1"/><rect x="10.5" y="7" width="11" height="9" rx="1"/></svg>
+            Peças e suportes
+          </li>
+        </ul>
+        <a class="btn btn-verde rv" href="#" data-wa data-cta-position="embalagens-faixa" data-produto="embalagens"
+           data-msg="Quero cotar embalagens de madeira na REPALEX. Tipo: ___ | Medida: ___ | Quantidade: ___">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg>
+          Cotar embalagens
+        </a>
       </div>
-      <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 18h26v6H3z"/><path d="M6 24v3M26 24v3M16 24v3M3 21h26"/></svg>
-        <span>Estrados</span>
-      </div>
-      <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="9" width="17" height="14" rx="1.5"/><path d="M25 12h3M25 16h3M25 20h3M8 9V6M13.5 9V6M19 9V6"/></svg>
-        <span>Embalagens sob medida</span>
-      </div>
-      <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="17" width="11" height="9" rx="1"/><rect x="17" y="17" width="11" height="9" rx="1"/><rect x="10.5" y="7" width="11" height="9" rx="1"/></svg>
-        <span>Peças e suportes</span>
-      </div>
-    </div>
-    <div class="centro rv">
-      <a class="btn btn-verde" href="#" data-wa data-cta-position="embalagens-faixa" data-produto="embalagens"
-         data-msg="Quero cotar embalagens de madeira na REPALEX. Tipo: ___ | Medida: ___ | Quantidade: ___">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.25.69-1.44 1.32-1.99 1.36-.53.05-1.02.24-3.45-.72-2.9-1.14-4.74-4.1-4.88-4.29-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.97.88 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.61.76 1.89.9.28.14.46.21.53.33.07.11.07.64-.18 1.33Z"/></svg>
-        Cotar embalagens
-      </a>
     </div>
   </div>
 </section>
