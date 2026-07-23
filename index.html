@@ -204,8 +204,15 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .card-cta:hover{text-decoration:underline}
 .card-cta:focus-visible{outline:3px solid var(--verde-claro);outline-offset:2px;border-radius:3px}
 
-/* Faixa de embalagens de madeira, fundo azul como no mock */
-.emb{background:var(--azul-esc);color:#fff;padding:clamp(46px,5.6vw,68px) 0}
+/* Faixa de embalagens de madeira, fundo azul como no mock.
+   A foto real de engradados entra como textura sob um veu azul opaco: da madeira
+   de verdade a secao sem afirmar que cada categoria e aquela foto. */
+.emb{position:relative;isolation:isolate;background:var(--azul-esc);color:#fff;padding:clamp(46px,5.6vw,68px) 0}
+.emb::before{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:url(assets/img/v6-emb-fundo.jpg);
+  background-image:image-set(url(assets/img/v6-emb-fundo.webp) type("image/webp"),
+                             url(assets/img/v6-emb-fundo.jpg) type("image/jpeg"));
+  background-size:cover;background-position:center;opacity:.22}
 .emb h2{font-size:clamp(22px,2.5vw,34px);color:#fff}
 .emb .risco{margin-top:14px}
 .emb-intro{margin-top:18px;color:var(--azul-claro);font-size:15px;max-width:560px;line-height:1.75}
