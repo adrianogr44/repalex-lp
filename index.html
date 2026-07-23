@@ -205,14 +205,9 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .card-cta:focus-visible{outline:3px solid var(--verde-claro);outline-offset:2px;border-radius:3px}
 
 /* Faixa de embalagens de madeira, fundo azul como no mock.
-   A foto real de engradados entra como textura sob um veu azul opaco: da madeira
-   de verdade a secao sem afirmar que cada categoria e aquela foto. */
-.emb{position:relative;isolation:isolate;background:var(--azul-esc);color:#fff;padding:clamp(46px,5.6vw,68px) 0}
-.emb::before{content:"";position:absolute;inset:0;z-index:-1;
-  background-image:url(assets/img/v6-emb-fundo.jpg);
-  background-image:image-set(url(assets/img/v6-emb-fundo.webp) type("image/webp"),
-                             url(assets/img/v6-emb-fundo.jpg) type("image/jpeg"));
-  background-size:cover;background-position:center;opacity:.22}
+   Cada card leva a foto real do produto daquela categoria; o fundo volta a ser
+   azul chapado para nao competir com as cinco fotos. */
+.emb{background:var(--azul-esc);color:#fff;padding:clamp(46px,5.6vw,68px) 0}
 .emb h2{font-size:clamp(22px,2.5vw,34px);color:#fff}
 .emb .risco{margin-top:14px}
 .emb-intro{margin-top:18px;color:var(--azul-claro);font-size:15px;max-width:560px;line-height:1.75}
@@ -222,10 +217,11 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 @media (max-width:679px){.emb-grid .emb-item:nth-child(5){grid-column:1/-1}}
 @media (min-width:680px){.emb-grid{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:1000px){.emb-grid{grid-template-columns:repeat(5,1fr)}}
-.emb-item{background:var(--azul-mid);border-radius:10px;padding:22px 16px;text-align:center}
-.emb-item svg{width:38px;height:38px;margin:0 auto 12px;stroke:var(--verde-claro);fill:none;
-  stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.emb-item span{display:block;font-size:13.5px;font-weight:600;color:#fff;line-height:1.4}
+.emb-item{background:var(--azul-mid);border-radius:10px;text-align:center;overflow:hidden}
+.emb-item img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+/* o quinto card ocupa a linha inteira ate 679px: a foto vira faixa para nao dominar a tela */
+@media (max-width:679px){.emb-grid .emb-item:nth-child(5) img{aspect-ratio:5/2}}
+.emb-item span{display:block;font-size:13.5px;font-weight:600;color:#fff;line-height:1.4;padding:14px 12px}
 .emb .centro{margin-top:34px}
 
 /* Por que escolher */
@@ -303,6 +299,7 @@ h1,h2,h3,h4{margin:0;font-family:var(--f-tit);font-weight:800;line-height:1.1;te
 .rod-fim{background:#F6F7F9;border-top:1px solid var(--linha);padding:20px 0 24px;font-size:13px;color:var(--muted)}
 .rod-fim span{display:block;margin-top:3px}
 .rod-fim strong{display:block;color:var(--azul-esc);font-size:13.5px;letter-spacing:.02em;margin-bottom:4px}
+.rod-cred{font-size:11.5px;margin-top:8px;opacity:.8}
 
 /* Botao flutuante */
 .fab{position:fixed;right:18px;bottom:18px;z-index:70;width:56px;height:56px;border-radius:50%;
@@ -516,23 +513,28 @@ html.js .rv.revelado{opacity:1;transform:none}
     <p class="emb-intro rv">Além dos pallets, fabricamos embalagens de madeira para transporte e armazenamento, no padrão que a sua carga exige.</p>
     <div class="emb-grid">
       <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 11 16 5l12 6v10l-12 6-12-6z"/><path d="M4 11l12 6 12-6M16 17v10"/></svg>
+        <picture><source srcset="assets/img/v6-emb-caixas.webp" type="image/webp">
+          <img src="assets/img/v6-emb-caixas.jpg" width="600" height="450" loading="lazy" decoding="async" alt="Caixa de madeira montada com tábuas pregadas"></picture>
         <span>Caixas de madeira</span>
       </div>
       <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="1.5"/><path d="M9 7v18M14.5 7v18M20 7v18M25 7v18"/></svg>
+        <picture><source srcset="assets/img/v6-emb-gaiolas.webp" type="image/webp">
+          <img src="assets/img/v6-emb-gaiolas.jpg" width="600" height="450" loading="lazy" decoding="async" alt="Gaiolas de madeira de ripas espaçadas empilhadas"></picture>
         <span>Gaiolas de madeira</span>
       </div>
       <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 18h26v6H3z"/><path d="M6 24v3M26 24v3M16 24v3M3 21h26"/></svg>
+        <picture><source srcset="assets/img/v6-emb-estrados.webp" type="image/webp">
+          <img src="assets/img/v6-emb-estrados.jpg" width="600" height="450" loading="lazy" decoding="async" alt="Pilhas de estrados de madeira em pátio"></picture>
         <span>Estrados</span>
       </div>
       <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="9" width="17" height="14" rx="1.5"/><path d="M25 12h3M25 16h3M25 20h3M8 9V6M13.5 9V6M19 9V6"/></svg>
+        <picture><source srcset="assets/img/v6-emb-sobmedida.webp" type="image/webp">
+          <img src="assets/img/v6-emb-sobmedida.jpg" width="600" height="450" loading="lazy" decoding="async" alt="Embalagem de madeira de grande porte feita sob medida"></picture>
         <span>Embalagens sob medida</span>
       </div>
       <div class="emb-item rv">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="17" width="11" height="9" rx="1"/><rect x="17" y="17" width="11" height="9" rx="1"/><rect x="10.5" y="7" width="11" height="9" rx="1"/></svg>
+        <picture><source srcset="assets/img/v6-emb-pecas.webp" type="image/webp">
+          <img src="assets/img/v6-emb-pecas.jpg" width="600" height="450" loading="lazy" decoding="async" alt="Peças de madeira serrada empilhadas"></picture>
         <span>Peças e suportes</span>
       </div>
     </div>
@@ -750,6 +752,9 @@ html.js .rv.revelado{opacity:1;transform:none}
     <div class="wrap">
       <strong>REPALEX PALETES LTDA</strong>
       <span>© 2026 Repalex. Todos os direitos reservados.</span>
+      <!-- Credito exigido pela licenca CC BY-SA 4.0 de uma das fotos ilustrativas.
+           Sai junto com as imagens provisorias quando as fotos reais do patio entrarem. -->
+      <span class="rod-cred">Imagens ilustrativas de bancos livres. Embalagem sob medida: foto de VCCmatt (Wikimedia Commons, CC BY-SA 4.0).</span>
     </div>
   </div>
 </footer>
