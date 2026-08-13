@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repalex | Pallets e Embalagens de Madeira</title>
+<meta name="description" content="Pallets novos, usados e reformados, além de embalagens de madeira sob medida. Encontre soluções para sua operação com a Repalex.">
+<meta property="og:title" content="Repalex | Pallets e Embalagens de Madeira">
+<meta property="og:description" content="Compra, venda, reforma e fabricação de pallets e embalagens de madeira para empresas.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/caminhao-azul-frente.jpg">
+<link rel="icon" type="image/png" href="img/logo-repalex.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Ícones: Flaticon UIcons (https://www.flaticon.com/uicons) -->
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+<style>
+/* ==========================================================================
+   REPALEX  |  Landing Page  |  Industrial Premium
+   Paleta: azul-marinho institucional + verde da marca + off-white + madeira
+   ========================================================================== */
+:root{
+  --navy-900:#081B2E;
+  --navy-800:#0B2239;
+  --navy-700:#10304F;
+  --navy-600:#1A4066;
+  --green-600:#4C8427;
+  --green-500:#5E9C33;
+  --green-400:#74B347;
+  --green-050:#EFF6E8;
+  --wood-500:#A9793F;
+  --off-white:#F6F7F4;
+  --white:#FFFFFF;
+  --ink:#22303C;
+  --ink-soft:#5A6B7A;
+  --line:#E3E7E2;
+  --shadow-soft:0 8px 30px rgba(8,27,46,.08);
+  --shadow-card:0 14px 40px rgba(8,27,46,.12);
+  --radius:10px;
+  --font-display:'Archivo',sans-serif;
+  --font-body:'Manrope',sans-serif;
+  --header-h:84px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--off-white);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{width:min(1200px,92%);margin-inline:auto}
+
+/* -------- Tipografia base -------- */
+h1,h2,h3{font-family:var(--font-display);line-height:1.08;text-transform:uppercase;letter-spacing:-.01em}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--font-display);font-weight:700;font-size:.78rem;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--green-600);
+}
+.eyebrow::before{content:"";width:34px;height:3px;background:var(--green-500)}
+.section-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800;color:var(--navy-800);margin:.55em 0 .4em}
+.section-title .hl{color:var(--green-600)}
+.section-lead{max-width:640px;color:var(--ink-soft);font-size:1.05rem}
+
+/* -------- Ícones (Flaticon UIcons) -------- */
+i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
+.fi::before{line-height:1}
+.btn .fi{font-size:1.1em}
+.dif-icon .fi{font-size:24px}
+.contact-card .dif-icon .fi{font-size:20px}
+.hero-trust .fi{color:var(--green-400);font-size:15px}
+.about-points .fi{color:var(--green-500);font-size:16px}
+.about-badge .fi{color:var(--green-400);font-size:28px}
+.footer-contact .fi{color:var(--green-400);font-size:15px;margin-top:3px}
+.wa-float .fi{font-size:27px}
+
+/* -------- Botões -------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--font-display);font-weight:700;font-size:.92rem;
+  letter-spacing:.06em;text-transform:uppercase;
+  padding:17px 30px;border-radius:6px;border:2px solid transparent;
+  cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;
+  white-space:nowrap;
+}
+.btn svg{flex:none}
+.btn-green{background:var(--green-500);color:#fff;box-shadow:0 10px 24px rgba(94,156,51,.35)}
+.btn-green:hover{background:var(--green-600);transform:translateY(-2px);box-shadow:0 14px 30px rgba(76,132,39,.4)}
+.btn-outline-light{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn-outline-light:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-outline-navy{border-color:var(--navy-800);color:var(--navy-800);background:transparent}
+.btn-outline-navy:hover{background:var(--navy-800);color:#fff}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:200;height:var(--header-h);
+  background:var(--white);display:flex;align-items:center;
+  transition:box-shadow .3s ease,height .3s ease;
+}
+.header.scrolled{height:68px;box-shadow:0 6px 24px rgba(8,27,46,.09)}
+.header .container{width:min(1360px,94%)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+
+/* Logo oficial da Repalex (img/logo-repalex.png, fundo transparente) */
+.brand{display:flex;align-items:center;flex:none}
+.brand img{height:64px;width:auto;transition:height .3s ease}
+.header.scrolled .brand img{height:52px}
+
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{
+  font-weight:600;font-size:.86rem;color:var(--navy-800);position:relative;padding:6px 0;white-space:nowrap;
+}
+.nav a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--green-500);transition:width .25s ease;
+}
+.nav a:hover::after{width:100%}
+.header-cta{display:inline-flex}
+.header .btn{padding:13px 22px;font-size:.8rem}
+
+.menu-toggle{
+  display:none;background:none;border:0;cursor:pointer;padding:8px;
+}
+.menu-toggle span{display:block;width:26px;height:3px;background:var(--navy-800);margin:5px 0;border-radius:2px;transition:.3s}
+.menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero{
+  position:relative;min-height:680px;height:88vh;max-height:820px;
+  margin-top:var(--header-h);
+  display:flex;align-items:center;
+  background:var(--navy-900);
+  overflow:hidden;
+}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(92deg,rgba(8,27,46,.92) 0%,rgba(8,27,46,.72) 34%,rgba(8,27,46,.28) 62%,rgba(8,27,46,.08) 100%);
+}
+.hero-content{position:relative;z-index:2;max-width:640px;color:#fff;padding-block:70px}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--font-display);font-weight:700;font-size:.75rem;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--green-400);
+  margin-bottom:24px;
+}
+.hero-kicker::before{content:"";width:38px;height:3px;background:var(--green-500)}
+.hero h1{
+  font-size:clamp(2.3rem,5vw,4rem);font-weight:900;color:#fff;
+  margin-bottom:22px;
+}
+.hero h1 .hl{color:var(--green-400)}
+.hero-sub{font-size:clamp(1rem,1.4vw,1.18rem);color:rgba(255,255,255,.88);max-width:520px;margin-bottom:34px;font-weight:500}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:34px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:10px 28px}
+.hero-trust li{
+  display:flex;align-items:center;gap:9px;
+  font-size:.9rem;font-weight:600;color:rgba(255,255,255,.85);
+}
+.hero-trust svg{color:var(--green-400);flex:none}
+
+/* faixa decorativa de "ripas" na base do hero */
+.hero-slats{
+  position:absolute;left:0;right:0;bottom:0;height:10px;z-index:3;
+  background:repeating-linear-gradient(90deg,var(--green-500) 0 46px,var(--navy-800) 46px 92px);
+}
+
+/* ==========================================================================
+   DIFERENCIAIS
+   ========================================================================== */
+.difs{background:var(--navy-800);color:#fff;padding:54px 0}
+.difs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
+.dif{display:flex;gap:16px;align-items:flex-start}
+.dif-icon{
+  width:56px;height:56px;flex:none;border-radius:8px;
+  background:rgba(94,156,51,.14);border:1px solid rgba(94,156,51,.4);
+  display:grid;place-items:center;color:var(--green-400);
+  transition:background .3s,transform .3s;
+}
+.dif:hover .dif-icon{background:var(--green-500);color:#fff;transform:translateY(-3px)}
+.dif h3{font-size:.95rem;font-weight:800;letter-spacing:.04em;margin-bottom:5px;color:#fff}
+.dif p{font-size:.88rem;color:rgba(255,255,255,.72);line-height:1.5}
+
+/* ==========================================================================
+   QUEM SOMOS
+   ========================================================================== */
+.about{padding:110px 0;background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-text p{color:var(--ink-soft);margin-bottom:18px}
+.about-points{margin:26px 0 34px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+.about-points li{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;color:var(--navy-800)}
+.about-points svg{color:var(--green-500);flex:none}
+.about-media{position:relative}
+.about-media img{
+  width:100%;height:520px;object-fit:cover;border-radius:var(--radius);
+  box-shadow:var(--shadow-card);
+}
+.about-media::before{
+  content:"";position:absolute;top:-22px;right:-22px;width:60%;height:60%;
+  border:3px solid var(--green-500);border-radius:var(--radius);z-index:-1;
+}
+.about-badge{
+  position:absolute;left:-20px;bottom:34px;
+  background:var(--navy-800);color:#fff;border-radius:8px;
+  padding:18px 24px;box-shadow:var(--shadow-card);
+  display:flex;align-items:center;gap:14px;max-width:280px;
+}
+.about-badge svg{color:var(--green-400);flex:none}
+.about-badge b{font-family:var(--font-display);font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;line-height:1.3}
+
+/* ==========================================================================
+   SOLUÇÕES
+   ========================================================================== */
+.solutions{padding:110px 0;background:var(--off-white);position:relative}
+.solutions-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:52px;flex-wrap:wrap}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.sol-card{
+  background:var(--white);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-soft);display:flex;flex-direction:column;
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.sol-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card)}
+.sol-media{position:relative;height:220px;overflow:hidden}
+.sol-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.sol-card:hover .sol-media img{transform:scale(1.06)}
+.sol-media::after{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,27,46,.45));
+  opacity:0;transition:opacity .35s;
+}
+.sol-card:hover .sol-media::after{opacity:1}
+.sol-tag{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:var(--green-500);color:#fff;font-family:var(--font-display);
+  font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:6px 12px;border-radius:4px;
+}
+/* PLACEHOLDER de imagem de produto: substituir por foto real quando disponível */
+.sol-media.is-placeholder{
+  background:
+    repeating-linear-gradient(45deg,rgba(11,34,57,.05) 0 14px,transparent 14px 28px),
+    var(--green-050);
+  display:grid;place-items:center;
+}
+.sol-media.is-placeholder p{
+  font-family:var(--font-display);font-weight:700;font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+  border:1.5px dashed var(--ink-soft);padding:10px 16px;border-radius:6px;text-align:center;
+}
+.sol-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.sol-body h3{font-size:1.08rem;font-weight:800;color:var(--navy-800);margin-bottom:10px}
+.sol-body p{font-size:.92rem;color:var(--ink-soft);flex:1}
+.sol-link{
+  margin-top:18px;display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-display);font-weight:700;font-size:.8rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);
+}
+.sol-link svg{transition:transform .25s}
+.sol-link:hover svg{transform:translateX(5px)}
+
+/* ==========================================================================
+   FAIXA DE CONVERSÃO
+   ========================================================================== */
+.convert{background:var(--navy-800);color:#fff;overflow:hidden}
+.convert-grid{display:grid;grid-template-columns:1.1fr 1fr;min-height:440px}
+.convert-media{position:relative}
+.convert-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.convert-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent 55%,var(--navy-800) 100%);
+}
+.convert-body{display:flex;flex-direction:column;justify-content:center;padding:70px 8% 70px 60px}
+.convert-body h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:900;color:#fff;margin-bottom:16px}
+.convert-body h2 .hl{color:var(--green-400)}
+.convert-body p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:32px;max-width:440px}
+
+/* ==========================================================================
+   SUSTENTABILIDADE
+   ========================================================================== */
+.sustain{padding:110px 0;background:var(--white)}
+.sustain-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.sustain-media{position:relative}
+.sustain-media img{width:100%;height:480px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-card)}
+.sustain-media::before{
+  content:"";position:absolute;bottom:-22px;left:-22px;width:55%;height:55%;
+  background:repeating-linear-gradient(90deg,var(--green-050) 0 16px,transparent 16px 32px);
+  border-radius:var(--radius);z-index:-1;
+}
+.sustain-items{margin-top:30px;display:grid;gap:20px}
+.sustain-item{display:flex;gap:16px;align-items:flex-start}
+.sustain-item .dif-icon{background:var(--green-050);border-color:var(--green-400);color:var(--green-600)}
+.sustain-item:hover .dif-icon{background:var(--green-500);color:#fff}
+.sustain-item h3{font-size:.95rem;font-weight:800;color:var(--navy-800);margin-bottom:4px}
+.sustain-item p{font-size:.9rem;color:var(--ink-soft)}
+
+/* ==========================================================================
+   GALERIA
+   ========================================================================== */
+.gallery{padding:110px 0;background:var(--off-white)}
+.gallery-grid{
+  display:grid;gap:16px;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:210px;
+  margin:52px 0 40px;
+}
+.g-item{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:var(--navy-800)}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease,opacity .35s}
+.g-item:hover img{transform:scale(1.07);opacity:.82}
+.g-item::after{
+  content:"+";position:absolute;inset:0;display:grid;place-items:center;
+  font-family:var(--font-display);font-size:2.4rem;font-weight:600;color:#fff;
+  background:rgba(8,27,46,.35);opacity:0;transition:opacity .35s;
+}
+.g-item:hover::after{opacity:1}
+.g-item.tall{grid-row:span 2}
+.g-item.wide{grid-column:span 2}
+.gallery-cta{text-align:center}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:400;background:rgba(5,15,26,.94);
+  display:none;align-items:center;justify-content:center;padding:5vh 5vw;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb-btn{
+  position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);
+  color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;
+  display:grid;place-items:center;transition:background .25s;
+}
+.lb-btn:hover{background:var(--green-500)}
+.lb-close{top:26px;right:26px}
+.lb-prev{left:26px;top:50%;transform:translateY(-50%)}
+.lb-next{right:26px;top:50%;transform:translateY(-50%)}
+
+/* ==========================================================================
+   ORÇAMENTO
+   ========================================================================== */
+.quote{padding:110px 0;background:var(--white)}
+.quote-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:start;margin-top:52px}
+.quote-form{
+  background:var(--off-white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:42px;box-shadow:var(--shadow-soft);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{
+  font-family:var(--font-display);font-size:.72rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--navy-800);
+}
+.field input,.field select,.field textarea{
+  font-family:var(--font-body);font-size:.95rem;color:var(--ink);
+  background:var(--white);border:1.5px solid var(--line);border-radius:6px;
+  padding:14px 16px;transition:border-color .25s,box-shadow .25s;width:100%;
+}
+.field textarea{resize:vertical;min-height:110px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--green-500);box-shadow:0 0 0 3px rgba(94,156,51,.18);
+}
+.quote-form .btn{width:100%;margin-top:8px}
+.form-note{font-size:.8rem;color:var(--ink-soft);margin-top:14px;text-align:center}
+
+.quote-side h3{font-size:1.25rem;font-weight:800;color:var(--navy-800);margin-bottom:8px}
+.quote-side>p{color:var(--ink-soft);font-size:.95rem;margin-bottom:28px}
+.contact-card{
+  display:flex;align-items:flex-start;gap:16px;background:var(--off-white);
+  border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:14px;
+  transition:transform .25s,box-shadow .25s;
+}
+.contact-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+.contact-card .dif-icon{width:46px;height:46px;background:var(--green-050);border-color:var(--green-400);color:var(--green-600)}
+.contact-card b{display:block;font-family:var(--font-display);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px}
+.contact-card span{font-weight:700;color:var(--navy-800);font-size:.98rem;word-break:break-word}
+.contact-card span.placeholder{color:var(--ink-soft);font-weight:500;font-style:italic}
+
+/* ==========================================================================
+   CTA FINAL
+   ========================================================================== */
+.final-cta{position:relative;padding:130px 0;color:#fff;text-align:center;overflow:hidden;background:var(--navy-900)}
+.final-cta-media{position:absolute;inset:0}
+.final-cta-media img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.final-cta-media::after{content:"";position:absolute;inset:0;background:rgba(6,18,31,.82)}
+.final-cta .container{position:relative;z-index:2;max-width:820px}
+.final-cta h2{font-size:clamp(1.9rem,3.6vw,3rem);font-weight:900;color:#fff;margin-bottom:18px}
+.final-cta h2 .hl{color:var(--green-400)}
+.final-cta p{color:rgba(255,255,255,.85);font-size:1.08rem;margin-bottom:36px}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer{background:var(--navy-900);color:rgba(255,255,255,.75);padding:80px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px;padding-bottom:60px}
+.footer .brand-text b{color:#fff}
+.footer .brand-text small{color:rgba(255,255,255,.55)}
+.footer-about p{margin-top:20px;font-size:.92rem;max-width:340px}
+.footer h4{
+  font-family:var(--font-display);font-size:.8rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-bottom:22px;
+}
+.footer-links li{margin-bottom:11px}
+.footer-links a{font-size:.92rem;transition:color .25s;position:relative}
+.footer-links a:hover{color:var(--green-400)}
+.footer-contact li{display:flex;gap:12px;align-items:flex-start;margin-bottom:15px;font-size:.92rem}
+.footer-contact svg{color:var(--green-400);flex:none;margin-top:3px}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding:24px 0;
+  font-size:.82rem;color:rgba(255,255,255,.5);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.footer-bottom .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;width:min(1200px,92%)}
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE WHATSAPP
+   ========================================================================== */
+.wa-float{
+  position:fixed;right:22px;bottom:22px;z-index:300;
+  width:60px;height:60px;border-radius:50%;background:var(--green-500);
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 12px 30px rgba(76,132,39,.45);
+  transition:transform .3s,background .3s;
+  animation:waPulse 2.6s infinite;
+}
+.wa-float:hover{transform:scale(1.08);background:var(--green-600)}
+@keyframes waPulse{
+  0%{box-shadow:0 12px 30px rgba(76,132,39,.45),0 0 0 0 rgba(94,156,51,.45)}
+  70%{box-shadow:0 12px 30px rgba(76,132,39,.45),0 0 0 18px rgba(94,156,51,0)}
+  100%{box-shadow:0 12px 30px rgba(76,132,39,.45),0 0 0 0 rgba(94,156,51,0)}
+}
+
+/* ==========================================================================
+   ANIMAÇÕES DE ENTRADA
+   ========================================================================== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-d1{transition-delay:.12s}
+.reveal-d2{transition-delay:.24s}
+.reveal-d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .wa-float{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width:1280px){
+  .nav .nav-sec{display:none}
+}
+@media (max-width:1080px){
+  .nav{gap:20px}
+  .difs-grid{grid-template-columns:repeat(2,1fr)}
+  .sol-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:900px){
+  :root{--header-h:70px}
+  .menu-toggle{display:block}
+  .nav{
+    position:fixed;top:var(--header-h);left:0;right:0;z-index:190;
+    background:var(--white);flex-direction:column;align-items:flex-start;
+    padding:26px 6%;gap:4px;box-shadow:0 18px 30px rgba(8,27,46,.12);
+    transform:translateY(-130%);transition:transform .35s ease;
+  }
+  .nav.open{transform:translateY(0)}
+  .nav a{width:100%;padding:12px 0;border-bottom:1px solid var(--line);font-size:1rem}
+  .nav .nav-sec{display:block}
+  .brand img{height:48px}
+  .header.scrolled .brand img{height:44px}
+  .header-cta span{display:none}
+  .header .btn{padding:12px 14px}
+  .hero{height:auto;min-height:0;padding:40px 0 70px}
+  .hero-media img{object-position:70% 40%}
+  .about-grid,.sustain-grid{grid-template-columns:1fr;gap:50px}
+  .about-media img,.sustain-media img{height:380px}
+  .about-badge{left:12px}
+  .convert-grid{grid-template-columns:1fr}
+  .convert-media{height:280px;position:relative}
+  .convert-media::after{background:linear-gradient(180deg,transparent 55%,var(--navy-800) 100%)}
+  .convert-body{padding:50px 6% 64px}
+  .quote-grid{grid-template-columns:1fr;gap:44px}
+}
+@media (max-width:640px){
+  .section-title{font-size:1.75rem}
+  .difs-grid{grid-template-columns:1fr;gap:26px}
+  .sol-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .form-row{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .quote-form{padding:28px 20px}
+  .footer-grid{grid-template-columns:1fr;gap:44px}
+  .about-media::before,.sustain-media::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header class="header" id="topo">
+  <div class="container header-inner">
+
+    <a class="brand" href="#topo" aria-label="Repalex, página inicial">
+      <img src="img/logo-repalex.png" alt="Repalex Soluções em Paletes">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#topo">Início</a>
+      <a href="#quem-somos">Sobre Nós</a>
+      <a href="#solucoes">Produtos e Serviços</a>
+      <a class="nav-sec" href="#solucoes">Reforma de Pallets</a>
+      <a class="nav-sec" href="#solucoes">Embalagens de Madeira</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#orcamento">Contato</a>
+    </nav>
+
+    <a class="btn btn-green header-cta" data-wa href="#" aria-label="Solicitar orçamento pelo WhatsApp">
+      <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+      <span>Solicitar Orçamento</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" aria-label="Apresentação">
+  <div class="hero-media">
+    <img src="img/caminhao-azul-frente.jpg" alt="Caminhão da Repalex carregado com pallets de madeira no pátio" fetchpriority="high">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-kicker reveal">Soluções em Paletes</p>
+      <h1 class="reveal reveal-d1">Pallets e embalagens de madeira <span class="hl">para o seu negócio</span></h1>
+      <p class="hero-sub reveal reveal-d2">Compra, venda, reforma e fabricação de soluções em madeira para empresas que precisam de qualidade, agilidade e confiança.</p>
+      <div class="hero-actions reveal reveal-d3">
+        <a class="btn btn-green" data-wa href="#">
+          <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+          Solicitar Orçamento
+        </a>
+        <a class="btn btn-outline-light" href="#solucoes">Conheça Nossas Soluções</a>
+      </div>
+      <ul class="hero-trust reveal reveal-d3">
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Atendimento personalizado</li>
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Entrega rápida</li>
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Soluções sob medida</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hero-slats" aria-hidden="true"></div>
+</section>
+
+<!-- ======================= DIFERENCIAIS ======================= -->
+<section class="difs" aria-label="Diferenciais da Repalex">
+  <div class="container">
+    <div class="difs-grid">
+      <div class="dif reveal">
+        <div class="dif-icon" aria-hidden="true">
+          <i class="fi fi-sr-exchange" aria-hidden="true"></i>
+        </div>
+        <div><h3>Compra e Venda</h3><p>Pallets novos, usados e reformados.</p></div>
+      </div>
+      <div class="dif reveal reveal-d1">
+        <div class="dif-icon" aria-hidden="true">
+          <i class="fi fi-sr-hammer" aria-hidden="true"></i>
+        </div>
+        <div><h3>Reforma de Pallets</h3><p>Recupere seus pallets e aumente sua vida útil.</p></div>
+      </div>
+      <div class="dif reveal reveal-d2">
+        <div class="dif-icon" aria-hidden="true">
+          <i class="fi fi-sr-recycle" aria-hidden="true"></i>
+        </div>
+        <div><h3>Sustentabilidade</h3><p>Reaproveitamento responsável da madeira.</p></div>
+      </div>
+      <div class="dif reveal reveal-d3">
+        <div class="dif-icon" aria-hidden="true">
+          <i class="fi fi-sr-shipping-fast" aria-hidden="true"></i>
+        </div>
+        <div><h3>Entrega Rápida</h3><p>Agilidade para atender sua operação.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= QUEM SOMOS ======================= -->
+<section class="about" id="quem-somos">
+  <div class="container about-grid">
+    <div class="about-text">
+      <p class="eyebrow reveal">Quem Somos</p>
+      <h2 class="section-title reveal">Soluções em pallets para <span class="hl">movimentar o seu negócio</span></h2>
+      <p class="reveal">A Repalex atua com soluções completas em pallets e embalagens de madeira, oferecendo produtos novos, usados, reformados e personalizados para empresas de todos os portes.</p>
+      <p class="reveal">Trabalhamos com seriedade e compromisso em cada entrega, unindo qualidade de produto, atendimento próximo e responsabilidade no reaproveitamento da madeira.</p>
+      <ul class="about-points reveal">
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Qualidade</li>
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Experiência</li>
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Atendimento</li>
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Agilidade</li>
+        <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Responsabilidade ambiental</li>
+      </ul>
+      <a class="btn btn-outline-navy reveal" href="#solucoes">Conheça a Repalex</a>
+    </div>
+    <div class="about-media reveal">
+      <img src="img/paletes-empilhados.jpg" alt="Grande volume de pallets de madeira empilhados no pátio da Repalex" loading="lazy">
+      <div class="about-badge">
+        <i class="fi fi-sr-boxes" aria-hidden="true"></i>
+        <b>Operação estruturada para grandes volumes</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SOLUÇÕES ======================= -->
+<section class="solutions" id="solucoes">
+  <div class="container">
+    <div class="solutions-head">
+      <div>
+        <p class="eyebrow reveal">Produtos e Serviços</p>
+        <h2 class="section-title reveal">Nossas <span class="hl">Soluções</span></h2>
+        <p class="section-lead reveal">Tudo o que sua operação precisa em pallets e embalagens de madeira.</p>
+      </div>
+      <a class="btn btn-green reveal" data-wa href="#">
+        <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+        Pedir Orçamento
+      </a>
+    </div>
+
+    <div class="sol-grid">
+      <article class="sol-card reveal">
+        <div class="sol-media">
+          <span class="sol-tag">Padrão PBR</span>
+          <img src="img/produto-pbr.jpg" alt="Pallets de madeira padrão PBR empilhados" loading="lazy">
+        </div>
+        <div class="sol-body">
+          <h3>Pallets PBR</h3>
+          <p>Pallets padrão PBR para operações logísticas e industriais.</p>
+          <a class="sol-link" data-wa data-msg="Olá! Quero um orçamento de Pallets PBR." href="#">Saiba mais
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="sol-card reveal reveal-d1">
+        <div class="sol-media">
+          <span class="sol-tag">Econômico</span>
+          <img src="img/produto-descartavel.jpg" alt="Pallets descartáveis de madeira" loading="lazy">
+        </div>
+        <div class="sol-body">
+          <h3>Pallets Descartáveis</h3>
+          <p>Soluções econômicas para transporte e armazenagem.</p>
+          <a class="sol-link" data-wa data-msg="Olá! Quero um orçamento de Pallets Descartáveis." href="#">Saiba mais
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="sol-card reveal reveal-d2">
+        <div class="sol-media">
+          <span class="sol-tag">Personalizado</span>
+          <img src="img/produto-sob-medida.jpg" alt="Pallets de madeira em dimensões especiais" loading="lazy">
+        </div>
+        <div class="sol-body">
+          <h3>Pallets Sob Medida</h3>
+          <p>Produção conforme dimensões e necessidades específicas.</p>
+          <a class="sol-link" data-wa data-msg="Olá! Quero um orçamento de Pallets Sob Medida." href="#">Saiba mais
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="sol-card reveal">
+        <div class="sol-media">
+          <span class="sol-tag">Economia</span>
+          <img src="img/produto-reformados.jpg" alt="Pallets de madeira recuperados empilhados" loading="lazy">
+        </div>
+        <div class="sol-body">
+          <h3>Pallets Reformados</h3>
+          <p>Pallets recuperados com foco em economia e reaproveitamento.</p>
+          <a class="sol-link" data-wa data-msg="Olá! Quero um orçamento de Pallets Reformados." href="#">Saiba mais
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="sol-card reveal reveal-d1">
+        <div class="sol-media">
+          <span class="sol-tag">Serviço</span>
+          <img src="img/produto-reforma.jpg" alt="Estrutura de madeira de pallet em recuperação" loading="lazy">
+        </div>
+        <div class="sol-body">
+          <h3>Reforma de Pallets</h3>
+          <p>Recuperação estrutural e aumento da vida útil.</p>
+          <a class="sol-link" data-wa data-msg="Olá! Quero um orçamento de Reforma de Pallets." href="#">Saiba mais
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="sol-card reveal reveal-d2">
+        <div class="sol-media">
+          <span class="sol-tag">Sob demanda</span>
+          <img src="img/produto-embalagens.jpg" alt="Caixas de madeira para transporte e armazenagem" loading="lazy">
+        </div>
+        <div class="sol-body">
+          <h3>Embalagens de Madeira</h3>
+          <p>Caixas, gaiolas, estrados e soluções personalizadas.</p>
+          <a class="sol-link" data-wa data-msg="Olá! Quero um orçamento de Embalagens de Madeira." href="#">Saiba mais
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONVERSÃO ======================= -->
+<section class="convert" aria-label="Solicite um orçamento">
+  <div class="convert-grid">
+    <div class="convert-media">
+      <img src="img/carreta-carregada.jpg" alt="Carreta carregada com pallets de madeira pronta para entrega" loading="lazy">
+    </div>
+    <div class="convert-body">
+      <h2 class="reveal">Precisa de pallets <span class="hl">para sua operação?</span></h2>
+      <p class="reveal reveal-d1">Fale com nossa equipe e encontre a solução ideal para sua empresa.</p>
+      <div class="reveal reveal-d2">
+        <a class="btn btn-green" data-wa href="#">
+          <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+          Solicitar Orçamento pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SUSTENTABILIDADE ======================= -->
+<section class="sustain" id="sustentabilidade">
+  <div class="container sustain-grid">
+    <div class="sustain-media reveal">
+      <img src="img/caminhao-amarelo-carga.jpg" alt="Pallets de madeira reaproveitados carregados para nova utilização" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow reveal">Sustentabilidade</p>
+      <h2 class="section-title reveal">Mais vida útil <span class="hl">para a madeira</span></h2>
+      <p class="section-lead reveal">O reaproveitamento faz parte da operação da Repalex. Cada pallet reformado é madeira que volta a trabalhar, reduzindo desperdício e custo para o seu negócio.</p>
+      <div class="sustain-items">
+        <div class="sustain-item reveal">
+          <div class="dif-icon" aria-hidden="true">
+            <i class="fi fi-sr-arrows-repeat" aria-hidden="true"></i>
+          </div>
+          <div><h3>Reaproveitamento responsável</h3><p>Pallets usados voltam ao ciclo produtivo por meio de reforma e recuperação estrutural.</p></div>
+        </div>
+        <div class="sustain-item reveal reveal-d1">
+          <div class="dif-icon" aria-hidden="true">
+            <i class="fi fi-sr-leaf" aria-hidden="true"></i>
+          </div>
+          <div><h3>Menos desperdício na operação</h3><p>Reformar antes de descartar prolonga a vida útil do ativo e reduz a compra de material novo.</p></div>
+        </div>
+        <div class="sustain-item reveal reveal-d2">
+          <div class="dif-icon" aria-hidden="true">
+            <i class="fi fi-sr-marker" aria-hidden="true"></i>
+          </div>
+          <div><h3>Madeira com destino certo</h3><p>Material avaliado, selecionado e reaproveitado com critério dentro do processo produtivo.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= GALERIA ======================= -->
+<section class="gallery" id="galeria">
+  <div class="container">
+    <p class="eyebrow reveal">Galeria</p>
+    <h2 class="section-title reveal">A operação <span class="hl">na prática</span></h2>
+    <p class="section-lead reveal">Fotos reais do dia a dia da Repalex: estoque, carregamento e entregas.</p>
+
+    <div class="gallery-grid">
+      <button class="g-item tall reveal" data-full="img/caminhao-azul-frente.jpg" aria-label="Ampliar foto: caminhão carregado com pallets">
+        <img src="img/caminhao-azul-frente.jpg" alt="Caminhão azul carregado com pallets de madeira" loading="lazy">
+      </button>
+      <button class="g-item wide reveal reveal-d1" data-full="img/carreta-carregada.jpg" aria-label="Ampliar foto: carreta carregada de pallets">
+        <img src="img/carreta-carregada.jpg" alt="Carreta com grande volume de pallets amarrados" loading="lazy" style="object-position:center 38%">
+      </button>
+      <button class="g-item reveal reveal-d2" data-full="img/paletes-empilhados.jpg" aria-label="Ampliar foto: pallets empilhados">
+        <img src="img/paletes-empilhados.jpg" alt="Pallets empilhados em grande quantidade" loading="lazy">
+      </button>
+      <button class="g-item reveal" data-full="img/caminhao-branco-carga.jpg" aria-label="Ampliar foto: carregamento de pallets">
+        <img src="img/caminhao-branco-carga.jpg" alt="Caminhão branco com carga completa de pallets" loading="lazy">
+      </button>
+      <button class="g-item reveal reveal-d1" data-full="img/carga-paletes-lateral.jpg" aria-label="Ampliar foto: carga de pallets vista lateral">
+        <img src="img/carga-paletes-lateral.jpg" alt="Vista lateral de carga de pallets no caminhão" loading="lazy">
+      </button>
+      <button class="g-item reveal reveal-d2" data-full="img/caminhao-amarelo-carga.jpg" aria-label="Ampliar foto: caminhão amarelo carregado">
+        <img src="img/caminhao-amarelo-carga.jpg" alt="Caminhão amarelo carregado com pallets ao entardecer" loading="lazy">
+      </button>
+    </div>
+
+    <div class="gallery-cta reveal">
+      <a class="btn btn-outline-navy" data-wa data-msg="Olá! Quero ver mais fotos dos produtos da Repalex." href="#">Ver Galeria Completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização de foto ampliada">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Foto anterior">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <img id="lbImg" src="" alt="Foto ampliada da galeria">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima foto">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+</div>
+
+<!-- ======================= ORÇAMENTO ======================= -->
+<section class="quote" id="orcamento">
+  <div class="container">
+    <p class="eyebrow reveal">Orçamento</p>
+    <h2 class="section-title reveal">Solicite seu <span class="hl">orçamento</span></h2>
+    <p class="section-lead reveal">Preencha os dados abaixo e nossa equipe responde pelo WhatsApp.</p>
+
+    <div class="quote-grid">
+      <form class="quote-form reveal" id="quoteForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="fNome">Nome *</label>
+            <input type="text" id="fNome" name="nome" required autocomplete="name" placeholder="Seu nome">
+          </div>
+          <div class="field">
+            <label for="fEmpresa">Empresa</label>
+            <input type="text" id="fEmpresa" name="empresa" autocomplete="organization" placeholder="Nome da empresa">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="fWhats">WhatsApp *</label>
+            <input type="tel" id="fWhats" name="whatsapp" required autocomplete="tel" placeholder="(00) 00000-0000">
+          </div>
+          <div class="field">
+            <label for="fEmail">E-mail</label>
+            <input type="email" id="fEmail" name="email" autocomplete="email" placeholder="voce@empresa.com.br">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="fProduto">Produto de interesse *</label>
+            <select id="fProduto" name="produto" required>
+              <option value="">Selecione</option>
+              <option>Pallets PBR</option>
+              <option>Pallets Descartáveis</option>
+              <option>Pallets Sob Medida</option>
+              <option>Pallets Reformados</option>
+              <option>Reforma de Pallets</option>
+              <option>Embalagens de Madeira</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fQtd">Quantidade</label>
+            <input type="text" id="fQtd" name="quantidade" placeholder="Ex.: 200 unidades">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full">
+            <label for="fCidade">Cidade / Região</label>
+            <input type="text" id="fCidade" name="cidade" placeholder="Onde será a entrega?">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full">
+            <label for="fMsg">Mensagem</label>
+            <textarea id="fMsg" name="mensagem" placeholder="Conte um pouco sobre sua necessidade"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-green">
+          <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+          Solicitar Orçamento
+        </button>
+        <p class="form-note">Ao enviar, você será direcionado ao WhatsApp da Repalex com sua solicitação preenchida.</p>
+      </form>
+
+      <aside class="quote-side reveal reveal-d1">
+        <h3>Fale diretamente com a Repalex</h3>
+        <p>Prefere falar agora? Escolha o canal mais prático para você.</p>
+
+        <a class="contact-card" data-wa href="#">
+          <div class="dif-icon" aria-hidden="true">
+            <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+          </div>
+          <div><b>WhatsApp</b><span data-phone-display>(31) 3157-6387</span></div>
+        </a>
+
+        <a class="contact-card" data-tel href="#">
+          <div class="dif-icon" aria-hidden="true">
+            <i class="fi fi-sr-phone-call" aria-hidden="true"></i>
+          </div>
+          <div><b>Telefone</b><span data-phone-display>(31) 3157-6387</span></div>
+        </a>
+
+        <a class="contact-card" href="mailto:Repalexltda@gmail.com">
+          <div class="dif-icon" aria-hidden="true">
+            <i class="fi fi-sr-envelope" aria-hidden="true"></i>
+          </div>
+          <div><b>E-mail</b><span>Repalexltda@gmail.com</span></div>
+        </a>
+
+        <!-- Incluir mapa somente quando o endereço completo for confirmado pela cliente -->
+        <div class="contact-card">
+          <div class="dif-icon" aria-hidden="true">
+            <i class="fi fi-sr-marker" aria-hidden="true"></i>
+          </div>
+          <div><b>Localização</b><span>Betim, Belo Horizonte, Contagem, Ibirité e região</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL ======================= -->
+<section class="final-cta" aria-label="Chamada final">
+  <div class="final-cta-media">
+    <img src="img/carga-paletes-lateral.jpg" alt="" role="presentation" loading="lazy">
+  </div>
+  <div class="container">
+    <h2 class="reveal">Pronto para encontrar a solução ideal <span class="hl">para sua operação?</span></h2>
+    <p class="reveal reveal-d1">Conte com a Repalex para compra, venda, reforma e fabricação de pallets e embalagens de madeira.</p>
+    <div class="reveal reveal-d2">
+      <a class="btn btn-green" data-wa href="#">
+        <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+        Falar com Especialista
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="#topo" aria-label="Repalex, voltar ao topo">
+        <img src="img/logo-repalex.png" alt="Repalex Soluções em Paletes" style="height:96px;width:auto">
+      </a>
+      <p>Soluções completas em pallets e embalagens de madeira: compra, venda, reforma e fabricação para empresas que precisam de qualidade e agilidade.</p>
+    </div>
+    <nav aria-label="Links do rodapé">
+      <h4>Navegação</h4>
+      <ul class="footer-links">
+        <li><a href="#topo">Início</a></li>
+        <li><a href="#quem-somos">Sobre Nós</a></li>
+        <li><a href="#solucoes">Produtos e Serviços</a></li>
+        <li><a href="#solucoes">Reforma de Pallets</a></li>
+        <li><a href="#solucoes">Embalagens</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#orcamento">Contato</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h4>Contato</h4>
+      <ul class="footer-contact">
+        <li>
+          <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+          <a data-wa href="#"><span data-phone-display>(31) 3157-6387</span></a>
+        </li>
+        <li>
+          <i class="fi fi-sr-envelope" aria-hidden="true"></i>
+          <a href="mailto:Repalexltda@gmail.com">Repalexltda@gmail.com</a>
+        </li>
+        <li>
+          <i class="fi fi-sr-marker" aria-hidden="true"></i>
+          <span>Betim, Belo Horizonte, Contagem, Ibirité e região</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© <span id="year"></span> Repalex Soluções em Paletes. Todos os direitos reservados.</span>
+      <span>Ícones por <a href="https://www.flaticon.com/uicons" target="_blank" rel="noopener" style="text-decoration:underline">Flaticon</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Botão flutuante WhatsApp -->
+<a class="wa-float" data-wa href="#" aria-label="Falar com a Repalex no WhatsApp">
+  <i class="fi fi-brands-whatsapp" aria-hidden="true"></i>
+</a>
+
+<script>
+/* ==========================================================================
+   CONFIG DE CONTATO
+   Número confirmado pelo Adriano em 04/08 (mesmo da LP v7 em homologação).
+   ========================================================================== */
+const WHATSAPP_NUMBER = "553131576387";
+const PHONE_DISPLAY   = "(31) 3157-6387";
+const DEFAULT_MSG     = "Olá! Vim pelo site da Repalex e quero solicitar um orçamento.";
+
+/* -------- Links de WhatsApp -------- */
+function waLink(msg){
+  return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg || DEFAULT_MSG);
+}
+document.querySelectorAll("[data-wa]").forEach(el=>{
+  el.addEventListener("click",e=>{
+    if(!WHATSAPP_NUMBER){
+      e.preventDefault();
+      alert("Página em homologação: número de WhatsApp da Repalex ainda não configurado.\nEdite a constante WHATSAPP_NUMBER no código.");
+      return;
+    }
+    el.setAttribute("href", waLink(el.dataset.msg));
+    el.setAttribute("target","_blank");
+    el.setAttribute("rel","noopener");
+  });
+});
+document.querySelectorAll("[data-phone-display]").forEach(el=>{
+  if(PHONE_DISPLAY) el.textContent = PHONE_DISPLAY;
+});
+document.querySelectorAll("[data-tel]").forEach(el=>{
+  if(WHATSAPP_NUMBER) el.setAttribute("href","tel:+"+WHATSAPP_NUMBER);
+});
+
+/* -------- Header sticky -------- */
+const header = document.querySelector(".header");
+window.addEventListener("scroll",()=>{
+  header.classList.toggle("scrolled", window.scrollY > 24);
+},{passive:true});
+
+/* -------- Menu mobile -------- */
+const nav = document.getElementById("nav");
+const toggle = document.getElementById("menuToggle");
+toggle.addEventListener("click",()=>{
+  const open = nav.classList.toggle("open");
+  toggle.classList.toggle("open", open);
+  toggle.setAttribute("aria-expanded", open);
+  toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+  nav.classList.remove("open");
+  toggle.classList.remove("open");
+  toggle.setAttribute("aria-expanded","false");
+}));
+
+/* -------- Reveal on scroll -------- */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:.14,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+/* -------- Lightbox da galeria -------- */
+const lightbox = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+const items = Array.from(document.querySelectorAll(".g-item"));
+let lbIndex = 0;
+function openLb(i){
+  lbIndex = (i + items.length) % items.length;
+  lbImg.src = items[lbIndex].dataset.full;
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeLb(){
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
+}
+items.forEach((item,i)=>item.addEventListener("click",()=>openLb(i)));
+document.getElementById("lbClose").addEventListener("click",closeLb);
+document.getElementById("lbPrev").addEventListener("click",()=>openLb(lbIndex-1));
+document.getElementById("lbNext").addEventListener("click",()=>openLb(lbIndex+1));
+lightbox.addEventListener("click",e=>{ if(e.target === lightbox) closeLb(); });
+document.addEventListener("keydown",e=>{
+  if(!lightbox.classList.contains("open")) return;
+  if(e.key === "Escape") closeLb();
+  if(e.key === "ArrowLeft") openLb(lbIndex-1);
+  if(e.key === "ArrowRight") openLb(lbIndex+1);
+});
+
+/* -------- Formulário: monta mensagem e abre WhatsApp -------- */
+document.getElementById("quoteForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f = e.target;
+  if(!f.reportValidity()) return;
+  const get = n => f.elements[n].value.trim();
+  const linhas = [
+    "*Solicitação de orçamento pelo site*",
+    "Nome: " + get("nome"),
+    get("empresa")    ? "Empresa: " + get("empresa") : "",
+    "WhatsApp: " + get("whatsapp"),
+    get("email")      ? "E-mail: " + get("email") : "",
+    "Produto: " + get("produto"),
+    get("quantidade") ? "Quantidade: " + get("quantidade") : "",
+    get("cidade")     ? "Cidade/Região: " + get("cidade") : "",
+    get("mensagem")   ? "Mensagem: " + get("mensagem") : ""
+  ].filter(Boolean).join("\n");
+  if(!WHATSAPP_NUMBER){
+    alert("Página em homologação: número de WhatsApp da Repalex ainda não configurado.\nEdite a constante WHATSAPP_NUMBER no código.");
+    return;
+  }
+  window.open(waLink(linhas),"_blank","noopener");
+});
+
+/* -------- Ano do copyright -------- */
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
