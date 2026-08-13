@@ -9,7 +9,7 @@
 <meta property="og:title" content="Repalex | Pallets e Embalagens de Madeira">
 <meta property="og:description" content="Compra, venda, reforma e fabricação de pallets e embalagens de madeira para empresas.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/convert-caminhao.jpg">
+<meta property="og:image" content="img/hero-paletes.jpg">
 <link rel="icon" type="image/png" href="img/logo-repalex.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,34 +141,19 @@ i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
    HERO
    ========================================================================== */
 .hero{
-  position:relative;margin-top:var(--header-h);
-  background:
-    radial-gradient(700px 460px at 22% 10%,rgba(94,156,51,.14),transparent 70%),
-    linear-gradient(180deg,var(--navy-800) 0%,var(--navy-900) 100%);
+  position:relative;min-height:680px;height:88vh;max-height:820px;
+  margin-top:var(--header-h);
+  display:flex;align-items:center;
+  background:var(--navy-900);
   overflow:hidden;
 }
-.hero::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 3px,transparent 3px 120px);
-}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:660px}
-.hero-col{display:flex;align-items:center;justify-content:flex-end;position:relative;z-index:2}
-.hero-content{width:min(620px,100%);color:#fff;padding:90px 56px 110px 4vw}
-.hero-panel{position:relative;min-height:660px}
-.hero-panel img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:34% 58%;
-  clip-path:polygon(15% 0,100% 0,100% 100%,0 100%);
-}
-.hero-panel::before{
-  content:"";position:absolute;inset:0;z-index:2;
-  clip-path:polygon(15% 0,18% 0,3% 100%,0 100%);
-  background:linear-gradient(180deg,var(--green-400),var(--green-600));
-}
-.hero-panel::after{
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 16%}
+.hero-media::after{
   content:"";position:absolute;inset:0;
-  clip-path:polygon(15% 0,100% 0,100% 100%,0 100%);
-  background:linear-gradient(98deg,rgba(8,27,46,.48) 4%,transparent 42%);
+  background:linear-gradient(92deg,rgba(8,27,46,.92) 0%,rgba(8,27,46,.72) 34%,rgba(8,27,46,.28) 62%,rgba(8,27,46,.08) 100%);
 }
+.hero-content{position:relative;z-index:2;max-width:640px;color:#fff;padding-block:70px}
 .hero-kicker{
   display:inline-flex;align-items:center;gap:12px;
   font-family:var(--font-display);font-weight:700;font-size:.75rem;
@@ -500,13 +485,8 @@ i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
   .header.scrolled .brand img{height:44px}
   .header-cta span{display:none}
   .header .btn{padding:12px 14px}
-  .hero-grid{grid-template-columns:1fr;min-height:0}
-  .hero-col{justify-content:flex-start}
-  .hero-content{padding:56px 6% 64px}
-  .hero-panel{min-height:340px}
-  .hero-panel img{clip-path:polygon(0 10%,100% 0,100% 100%,0 100%);object-position:30% 62%}
-  .hero-panel::before{clip-path:polygon(0 10%,100% 0,100% 3.5%,0 13.5%)}
-  .hero-panel::after{clip-path:polygon(0 10%,100% 0,100% 100%,0 100%);background:linear-gradient(180deg,rgba(8,27,46,.3),transparent 40%)}
+  .hero{height:auto;min-height:0;padding:40px 0 70px}
+  .hero-media img{object-position:center 75%}
   .about-grid,.sustain-grid{grid-template-columns:1fr;gap:50px}
   .about-media img,.sustain-media img{height:380px}
   .about-badge{left:12px}
@@ -565,8 +545,10 @@ i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
 
 <!-- ======================= HERO ======================= -->
 <section class="hero" aria-label="Apresentação">
-  <div class="hero-grid">
-    <div class="hero-col">
+  <div class="hero-media">
+    <img src="img/hero-paletes.jpg" alt="Pilhas de pallets de madeira no pátio da Repalex" fetchpriority="high">
+  </div>
+  <div class="container">
     <div class="hero-content">
       <p class="hero-kicker reveal">Soluções em Paletes</p>
       <h1 class="reveal reveal-d1">Pallets e embalagens de madeira <span class="hl">para o seu negócio</span></h1>
@@ -583,10 +565,6 @@ i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
         <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Entrega rápida</li>
         <li><i class="fi fi-sr-check-circle" aria-hidden="true"></i>Soluções sob medida</li>
       </ul>
-    </div>
-    </div>
-    <div class="hero-panel">
-      <img src="img/convert-caminhao.jpg" alt="Caminhão carregado com pallets de madeira no pátio da Repalex" fetchpriority="high">
     </div>
   </div>
   <div class="hero-slats" aria-hidden="true"></div>
