@@ -148,6 +148,7 @@ i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
   overflow:hidden;
 }
 .hero-media{position:absolute;inset:0}
+.hero-media picture{display:block;width:100%;height:100%}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:right center}
 .hero-media::after{
   content:"";position:absolute;inset:0;
@@ -487,7 +488,7 @@ i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
   .header-cta span{display:none}
   .header .btn{padding:12px 14px}
   .hero{height:auto;min-height:0;padding:40px 0 70px}
-  .hero-media img{object-position:74% center}
+  .hero-media img{object-position:center 78%}
   .about-grid,.sustain-grid{grid-template-columns:1fr;gap:50px}
   .about-media img,.sustain-media img{height:380px}
   .about-badge{left:12px}
@@ -547,7 +548,10 @@ i[class^="fi-"],i[class*=" fi-"],.fi{display:inline-flex;line-height:1}
 <!-- ======================= HERO ======================= -->
 <section class="hero" aria-label="Apresentação">
   <div class="hero-media">
-    <img src="img/hero-banner-azul.jpg" alt="Caminhão da Repalex carregado com pallets de madeira no pátio" fetchpriority="high">
+    <picture>
+      <source media="(max-width: 900px)" srcset="img/hero-banner-azul-mobile.jpg">
+      <img src="img/hero-banner-azul.jpg" alt="Caminhão da Repalex carregado com pallets de madeira no pátio" fetchpriority="high">
+    </picture>
   </div>
   <div class="container">
     <div class="hero-content">
